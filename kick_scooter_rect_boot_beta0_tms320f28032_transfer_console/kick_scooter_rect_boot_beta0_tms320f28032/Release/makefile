@@ -10,52 +10,87 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./DSP2803x_GlobalVariableDefs.obj" \
 "./DSP28xx_SciUtil.obj" \
+"./Exit_Boot.obj" \
+"./F2802x_CodeStartBranch.obj" \
 "./F2802x_GlobalVariableDefs.obj" \
 "./bootloader.obj" \
 "./main.obj" \
-"./f2802x_common/source/F2802x_Adc.obj" \
-"./f2802x_common/source/F2802x_CSMPasswords.obj" \
-"./f2802x_common/source/F2802x_Comp.obj" \
-"./f2802x_common/source/F2802x_CpuTimers.obj" \
-"./f2802x_common/source/F2802x_DBGIER.obj" \
-"./f2802x_common/source/F2802x_DefaultIsr.obj" \
-"./f2802x_common/source/F2802x_ECap.obj" \
-"./f2802x_common/source/F2802x_EPwm.obj" \
-"./f2802x_common/source/F2802x_Gpio.obj" \
-"./f2802x_common/source/F2802x_I2C.obj" \
-"./f2802x_common/source/F2802x_OscComp.obj" \
-"./f2802x_common/source/F2802x_PieCtrl.obj" \
-"./f2802x_common/source/F2802x_PieVect.obj" \
-"./f2802x_common/source/F2802x_Sci.obj" \
-"./f2802x_common/source/F2802x_Spi.obj" \
-"./f2802x_common/source/F2802x_SysCtrl.obj" \
-"./f2802x_common/source/F2802x_TempSensorConv.obj" \
-"./f2802x_common/source/F2802x_asmfuncs.obj" \
-"./f2802x_common/source/adc.obj" \
-"./f2802x_common/source/bootloader.obj" \
-"./f2802x_common/source/cap.obj" \
-"./f2802x_common/source/clk.obj" \
-"./f2802x_common/source/comp.obj" \
-"./f2802x_common/source/cpu.obj" \
-"./f2802x_common/source/esp8266.obj" \
-"./f2802x_common/source/flash.obj" \
-"./f2802x_common/source/gpio.obj" \
-"./f2802x_common/source/i2c.obj" \
-"./f2802x_common/source/osc.obj" \
-"./f2802x_common/source/pie.obj" \
-"./f2802x_common/source/pll.obj" \
-"./f2802x_common/source/pwm.obj" \
-"./f2802x_common/source/pwr.obj" \
-"./f2802x_common/source/sci.obj" \
-"./f2802x_common/source/sci_io.obj" \
-"./f2802x_common/source/spi.obj" \
-"./f2802x_common/source/timer.obj" \
-"./f2802x_common/source/wdog.obj" \
+"./f2803x_common/source/DSP2803x_Adc.obj" \
+"./f2803x_common/source/DSP2803x_CSMPasswords.obj" \
+"./f2803x_common/source/DSP2803x_CodeStartBranch.obj" \
+"./f2803x_common/source/DSP2803x_Comp.obj" \
+"./f2803x_common/source/DSP2803x_CpuTimers.obj" \
+"./f2803x_common/source/DSP2803x_DBGIER.obj" \
+"./f2803x_common/source/DSP2803x_DefaultIsr.obj" \
+"./f2803x_common/source/DSP2803x_DisInt.obj" \
+"./f2803x_common/source/DSP2803x_ECan.obj" \
+"./f2803x_common/source/DSP2803x_ECap.obj" \
+"./f2803x_common/source/DSP2803x_EPwm.obj" \
+"./f2803x_common/source/DSP2803x_EQep.obj" \
+"./f2803x_common/source/DSP2803x_Gpio.obj" \
+"./f2803x_common/source/DSP2803x_HRCap.obj" \
+"./f2803x_common/source/DSP2803x_I2C.obj" \
+"./f2803x_common/source/DSP2803x_Lin.obj" \
+"./f2803x_common/source/DSP2803x_OscComp.obj" \
+"./f2803x_common/source/DSP2803x_PieCtrl.obj" \
+"./f2803x_common/source/DSP2803x_PieVect.obj" \
+"./f2803x_common/source/DSP2803x_SWPrioritizedDefaultIsr.obj" \
+"./f2803x_common/source/DSP2803x_SWPrioritizedPieVect.obj" \
+"./f2803x_common/source/DSP2803x_Sci.obj" \
+"./f2803x_common/source/DSP2803x_Spi.obj" \
+"./f2803x_common/source/DSP2803x_SysCtrl.obj" \
+"./f2803x_common/source/DSP2803x_TempSensorConv.obj" \
+"./f2803x_common/source/DSP2803x_usDelay.obj" \
+"./f2803x_common/source/F2802x_Adc.obj" \
+"./f2803x_common/source/F2802x_CSMPasswords.obj" \
+"./f2803x_common/source/F2802x_Comp.obj" \
+"./f2803x_common/source/F2802x_CpuTimers.obj" \
+"./f2803x_common/source/F2802x_DBGIER.obj" \
+"./f2803x_common/source/F2802x_DefaultIsr.obj" \
+"./f2803x_common/source/F2802x_ECap.obj" \
+"./f2803x_common/source/F2802x_EPwm.obj" \
+"./f2803x_common/source/F2802x_Gpio.obj" \
+"./f2803x_common/source/F2802x_I2C.obj" \
+"./f2803x_common/source/F2802x_OscComp.obj" \
+"./f2803x_common/source/F2802x_PieCtrl.obj" \
+"./f2803x_common/source/F2802x_PieVect.obj" \
+"./f2803x_common/source/F2802x_Sci.obj" \
+"./f2803x_common/source/F2802x_Spi.obj" \
+"./f2803x_common/source/F2802x_SysCtrl.obj" \
+"./f2803x_common/source/F2802x_TempSensorConv.obj" \
+"./f2803x_common/source/F2802x_asmfuncs.obj" \
+"./f2803x_common/source/adc.obj" \
+"./f2803x_common/source/bootloader.obj" \
+"./f2803x_common/source/cap.obj" \
+"./f2803x_common/source/clk.obj" \
+"./f2803x_common/source/comp.obj" \
+"./f2803x_common/source/cpu.obj" \
+"./f2803x_common/source/esp8266.obj" \
+"./f2803x_common/source/flash.obj" \
+"./f2803x_common/source/gpio.obj" \
+"./f2803x_common/source/i2c.obj" \
+"./f2803x_common/source/osc.obj" \
+"./f2803x_common/source/pie.obj" \
+"./f2803x_common/source/pll.obj" \
+"./f2803x_common/source/pwm.obj" \
+"./f2803x_common/source/pwr.obj" \
+"./f2803x_common/source/sci.obj" \
+"./f2803x_common/source/sci_io.obj" \
+"./f2803x_common/source/spi.obj" \
+"./f2803x_common/source/timer.obj" \
+"./f2803x_common/source/wdog.obj" \
 "../2802x_FlashAPI_BootROMSymbols_v2.01.lib" \
+"../2803x_FlashAPI_BootROMSymbols.lib" \
+"../DSP2803x_Headers_BIOS.cmd" \
+"../DSP2803x_Headers_nonBIOS.cmd" \
 "../F2802x_Headers_nonBIOS.cmd" \
 "../F2802x_generic_flash.cmd" \
+"../F28032.cmd" \
+"C:/Workbanch_NEW/Workbanch_NEW/WT/SVN/KICK_SCOOTER_RECT_BOOT_BETA0_TMS320F28032_TRANSFER_CONSOLE/kick_scooter_rect_beta0_tms320f28032/kick_scooter_rect_beta0_tms320f28032/F28032_boot.cmd" \
 "../Flash2802x_API_V201.lib" \
+"../Flash2803x_API_V100.lib" \
 $(GEN_CMDS__FLAG) \
 -lrts2800_ml.lib \
 -l"C:/Workbanch_NEW/Workbanch_NEW/WT/kick_scooter_rect_boot_beta0/kick_scooter_rect_boot_beta0/Flash2802x_API_V201.lib" \
@@ -71,9 +106,9 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
--include f2802x_common/source/subdir_vars.mk
+-include f2803x_common/source/subdir_vars.mk
 -include subdir_rules.mk
--include f2802x_common/source/subdir_rules.mk
+-include f2803x_common/source/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -170,45 +205,48 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-kick_scooter_rect_boot_beta0.out \
+kick_scooter_rect_boot_beta0_tms320f28032.out \
 
 EXE_OUTPUTS__QUOTED += \
-"kick_scooter_rect_boot_beta0.out" \
+"kick_scooter_rect_boot_beta0_tms320f28032.out" \
 
 BIN_OUTPUTS += \
-kick_scooter_rect_boot_beta0.hex \
+kick_scooter_rect_boot_beta0_tms320f28032.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"kick_scooter_rect_boot_beta0.hex" \
+"kick_scooter_rect_boot_beta0_tms320f28032.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "kick_scooter_rect_boot_beta0.out"
+	@$(MAKE) --no-print-directory -Onone "kick_scooter_rect_boot_beta0_tms320f28032.out"
 
 # Tool invocations
-kick_scooter_rect_boot_beta0.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+kick_scooter_rect_boot_beta0_tms320f28032.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt -O0 --opt_for_speed=2 --advice:performance=all --define=_FLASH --define=_DEBUG --c99 --c++03 --relaxed_ansi --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"kick_scooter_rect_boot_beta0.map" --heap_size=0x100 --stack_size=0x300 --warn_sections -i"C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"C:/ti/c2000/C2000Ware_3_03_00_00/libraries/flash_api/f2802x/lib" -i"C:/Workbanch_NEW/Workbanch_NEW/WT/kick_scooter_rect_boot_beta0/kick_scooter_rect_boot_beta0" -i"C:/ti/C2000Ware_MotorControl_SDK_3_00_01_00/c2000ware/device_support/f2802x/common/lib" -i"C:/ti/C2000Ware_MotorControl_SDK_3_00_01_00/c2000ware/libraries/math/IQmath/c28/lib" -i"C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --disable_auto_rts --diag_wrap=off --issue_remarks --verbose_diagnostics --xml_link_info="kick_scooter_rect_boot_beta0_linkInfo.xml" --rom_model -o "kick_scooter_rect_boot_beta0.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/cl2000" -v28 -ml -mt -O0 --opt_for_speed=2 --advice:performance=all --define=_FLASH --define=_DEBUG --c99 --c++03 --relaxed_ansi --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"kick_scooter_rect_boot_beta0_tms320f28032.map" --heap_size=0x100 --stack_size=0x300 --warn_sections -i"C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/lib" -i"C:/ti/c2000/C2000Ware_3_03_00_00/libraries/flash_api/f2802x/lib" -i"C:/Workbanch_NEW/Workbanch_NEW/WT/SVN/KICK_SCOOTER_RECT_BOOT_BETA0_TMS320F28032_TRANSFER_CONSOLE/kick_scooter_rect_boot_beta0_tms320f28032_transfer_console/kick_scooter_rect_boot_beta0_tms320f28032" -i"/common/lib" -i"C:/ti/C2000Ware_MotorControl_SDK_3_00_01_00/c2000ware/libraries/math/IQmath/c28/lib" -i"C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/include" --reread_libs --disable_auto_rts --diag_wrap=off --issue_remarks --verbose_diagnostics --xml_link_info="kick_scooter_rect_boot_beta0_tms320f28032_linkInfo.xml" --rom_model -o "kick_scooter_rect_boot_beta0_tms320f28032.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-kick_scooter_rect_boot_beta0.hex: $(EXE_OUTPUTS)
+kick_scooter_rect_boot_beta0_tms320f28032.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/hex2000" --diag_wrap=off -o "kick_scooter_rect_boot_beta0.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.5.LTS/bin/hex2000" --diag_wrap=off -o "kick_scooter_rect_boot_beta0_tms320f28032.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "DSP28xx_SciUtil.obj" "F2802x_GlobalVariableDefs.obj" "bootloader.obj" "main.obj" "f2802x_common\source\F2802x_Adc.obj" "f2802x_common\source\F2802x_CSMPasswords.obj" "f2802x_common\source\F2802x_Comp.obj" "f2802x_common\source\F2802x_CpuTimers.obj" "f2802x_common\source\F2802x_DBGIER.obj" "f2802x_common\source\F2802x_DefaultIsr.obj" "f2802x_common\source\F2802x_ECap.obj" "f2802x_common\source\F2802x_EPwm.obj" "f2802x_common\source\F2802x_Gpio.obj" "f2802x_common\source\F2802x_I2C.obj" "f2802x_common\source\F2802x_OscComp.obj" "f2802x_common\source\F2802x_PieCtrl.obj" "f2802x_common\source\F2802x_PieVect.obj" "f2802x_common\source\F2802x_Sci.obj" "f2802x_common\source\F2802x_Spi.obj" "f2802x_common\source\F2802x_SysCtrl.obj" "f2802x_common\source\F2802x_TempSensorConv.obj" "f2802x_common\source\F2802x_asmfuncs.obj" "f2802x_common\source\adc.obj" "f2802x_common\source\bootloader.obj" "f2802x_common\source\cap.obj" "f2802x_common\source\clk.obj" "f2802x_common\source\comp.obj" "f2802x_common\source\cpu.obj" 
-	-$(RM) "f2802x_common\source\esp8266.obj" "f2802x_common\source\flash.obj" "f2802x_common\source\gpio.obj" "f2802x_common\source\i2c.obj" "f2802x_common\source\osc.obj" "f2802x_common\source\pie.obj" "f2802x_common\source\pll.obj" "f2802x_common\source\pwm.obj" "f2802x_common\source\pwr.obj" "f2802x_common\source\sci.obj" "f2802x_common\source\sci_io.obj" "f2802x_common\source\spi.obj" "f2802x_common\source\timer.obj" "f2802x_common\source\wdog.obj" 
-	-$(RM) "DSP28xx_SciUtil.d" "F2802x_GlobalVariableDefs.d" "bootloader.d" "main.d" "f2802x_common\source\F2802x_Adc.d" "f2802x_common\source\F2802x_Comp.d" "f2802x_common\source\F2802x_CpuTimers.d" "f2802x_common\source\F2802x_DefaultIsr.d" "f2802x_common\source\F2802x_ECap.d" "f2802x_common\source\F2802x_EPwm.d" "f2802x_common\source\F2802x_Gpio.d" "f2802x_common\source\F2802x_I2C.d" "f2802x_common\source\F2802x_OscComp.d" "f2802x_common\source\F2802x_PieCtrl.d" "f2802x_common\source\F2802x_PieVect.d" "f2802x_common\source\F2802x_Sci.d" "f2802x_common\source\F2802x_Spi.d" "f2802x_common\source\F2802x_SysCtrl.d" "f2802x_common\source\F2802x_TempSensorConv.d" "f2802x_common\source\adc.d" "f2802x_common\source\bootloader.d" "f2802x_common\source\cap.d" "f2802x_common\source\clk.d" "f2802x_common\source\comp.d" "f2802x_common\source\cpu.d" "f2802x_common\source\esp8266.d" "f2802x_common\source\flash.d" "f2802x_common\source\gpio.d" "f2802x_common\source\i2c.d" "f2802x_common\source\osc.d" "f2802x_common\source\pie.d" 
-	-$(RM) "f2802x_common\source\pll.d" "f2802x_common\source\pwm.d" "f2802x_common\source\pwr.d" "f2802x_common\source\sci.d" "f2802x_common\source\sci_io.d" "f2802x_common\source\spi.d" "f2802x_common\source\timer.d" "f2802x_common\source\wdog.d" 
-	-$(RM) "f2802x_common\source\F2802x_CSMPasswords.d" "f2802x_common\source\F2802x_DBGIER.d" "f2802x_common\source\F2802x_asmfuncs.d" 
+	-$(RM) "F2802x_CodeStartBranch.d" 
+	-$(RM) "DSP2803x_GlobalVariableDefs.obj" "DSP28xx_SciUtil.obj" "Exit_Boot.obj" "F2802x_CodeStartBranch.obj" "F2802x_GlobalVariableDefs.obj" "bootloader.obj" "main.obj" "f2803x_common\source\DSP2803x_Adc.obj" "f2803x_common\source\DSP2803x_CSMPasswords.obj" "f2803x_common\source\DSP2803x_CodeStartBranch.obj" "f2803x_common\source\DSP2803x_Comp.obj" "f2803x_common\source\DSP2803x_CpuTimers.obj" "f2803x_common\source\DSP2803x_DBGIER.obj" "f2803x_common\source\DSP2803x_DefaultIsr.obj" "f2803x_common\source\DSP2803x_DisInt.obj" "f2803x_common\source\DSP2803x_ECan.obj" "f2803x_common\source\DSP2803x_ECap.obj" "f2803x_common\source\DSP2803x_EPwm.obj" "f2803x_common\source\DSP2803x_EQep.obj" "f2803x_common\source\DSP2803x_Gpio.obj" "f2803x_common\source\DSP2803x_HRCap.obj" "f2803x_common\source\DSP2803x_I2C.obj" "f2803x_common\source\DSP2803x_Lin.obj" "f2803x_common\source\DSP2803x_OscComp.obj" "f2803x_common\source\DSP2803x_PieCtrl.obj" "f2803x_common\source\DSP2803x_PieVect.obj" "f2803x_common\source\DSP2803x_SWPrioritizedDefaultIsr.obj" 
+	-$(RM) "f2803x_common\source\DSP2803x_SWPrioritizedPieVect.obj" "f2803x_common\source\DSP2803x_Sci.obj" "f2803x_common\source\DSP2803x_Spi.obj" "f2803x_common\source\DSP2803x_SysCtrl.obj" "f2803x_common\source\DSP2803x_TempSensorConv.obj" "f2803x_common\source\DSP2803x_usDelay.obj" "f2803x_common\source\F2802x_Adc.obj" "f2803x_common\source\F2802x_CSMPasswords.obj" "f2803x_common\source\F2802x_Comp.obj" "f2803x_common\source\F2802x_CpuTimers.obj" "f2803x_common\source\F2802x_DBGIER.obj" "f2803x_common\source\F2802x_DefaultIsr.obj" "f2803x_common\source\F2802x_ECap.obj" "f2803x_common\source\F2802x_EPwm.obj" "f2803x_common\source\F2802x_Gpio.obj" "f2803x_common\source\F2802x_I2C.obj" "f2803x_common\source\F2802x_OscComp.obj" "f2803x_common\source\F2802x_PieCtrl.obj" "f2803x_common\source\F2802x_PieVect.obj" "f2803x_common\source\F2802x_Sci.obj" "f2803x_common\source\F2802x_Spi.obj" "f2803x_common\source\F2802x_SysCtrl.obj" "f2803x_common\source\F2802x_TempSensorConv.obj" "f2803x_common\source\F2802x_asmfuncs.obj" 
+	-$(RM) "f2803x_common\source\adc.obj" "f2803x_common\source\bootloader.obj" "f2803x_common\source\cap.obj" "f2803x_common\source\clk.obj" "f2803x_common\source\comp.obj" "f2803x_common\source\cpu.obj" "f2803x_common\source\esp8266.obj" "f2803x_common\source\flash.obj" "f2803x_common\source\gpio.obj" "f2803x_common\source\i2c.obj" "f2803x_common\source\osc.obj" "f2803x_common\source\pie.obj" "f2803x_common\source\pll.obj" "f2803x_common\source\pwm.obj" "f2803x_common\source\pwr.obj" "f2803x_common\source\sci.obj" "f2803x_common\source\sci_io.obj" "f2803x_common\source\spi.obj" "f2803x_common\source\timer.obj" "f2803x_common\source\wdog.obj" 
+	-$(RM) "DSP2803x_GlobalVariableDefs.d" "DSP28xx_SciUtil.d" "F2802x_GlobalVariableDefs.d" "bootloader.d" "main.d" "f2803x_common\source\DSP2803x_Adc.d" "f2803x_common\source\DSP2803x_Comp.d" "f2803x_common\source\DSP2803x_CpuTimers.d" "f2803x_common\source\DSP2803x_DefaultIsr.d" "f2803x_common\source\DSP2803x_ECan.d" "f2803x_common\source\DSP2803x_ECap.d" "f2803x_common\source\DSP2803x_EPwm.d" "f2803x_common\source\DSP2803x_EQep.d" "f2803x_common\source\DSP2803x_Gpio.d" "f2803x_common\source\DSP2803x_HRCap.d" "f2803x_common\source\DSP2803x_I2C.d" "f2803x_common\source\DSP2803x_Lin.d" "f2803x_common\source\DSP2803x_OscComp.d" "f2803x_common\source\DSP2803x_PieCtrl.d" "f2803x_common\source\DSP2803x_PieVect.d" "f2803x_common\source\DSP2803x_SWPrioritizedDefaultIsr.d" "f2803x_common\source\DSP2803x_SWPrioritizedPieVect.d" "f2803x_common\source\DSP2803x_Sci.d" "f2803x_common\source\DSP2803x_Spi.d" "f2803x_common\source\DSP2803x_SysCtrl.d" "f2803x_common\source\DSP2803x_TempSensorConv.d" "f2803x_common\source\F2802x_Adc.d" 
+	-$(RM) "f2803x_common\source\F2802x_Comp.d" "f2803x_common\source\F2802x_CpuTimers.d" "f2803x_common\source\F2802x_DefaultIsr.d" "f2803x_common\source\F2802x_ECap.d" "f2803x_common\source\F2802x_EPwm.d" "f2803x_common\source\F2802x_Gpio.d" "f2803x_common\source\F2802x_I2C.d" "f2803x_common\source\F2802x_OscComp.d" "f2803x_common\source\F2802x_PieCtrl.d" "f2803x_common\source\F2802x_PieVect.d" "f2803x_common\source\F2802x_Sci.d" "f2803x_common\source\F2802x_Spi.d" "f2803x_common\source\F2802x_SysCtrl.d" "f2803x_common\source\F2802x_TempSensorConv.d" "f2803x_common\source\adc.d" "f2803x_common\source\bootloader.d" "f2803x_common\source\cap.d" "f2803x_common\source\clk.d" "f2803x_common\source\comp.d" "f2803x_common\source\cpu.d" "f2803x_common\source\esp8266.d" "f2803x_common\source\flash.d" "f2803x_common\source\gpio.d" "f2803x_common\source\i2c.d" "f2803x_common\source\osc.d" "f2803x_common\source\pie.d" "f2803x_common\source\pll.d" "f2803x_common\source\pwm.d" "f2803x_common\source\pwr.d" "f2803x_common\source\sci.d" 
+	-$(RM) "f2803x_common\source\sci_io.d" "f2803x_common\source\spi.d" "f2803x_common\source\timer.d" "f2803x_common\source\wdog.d" 
+	-$(RM) "Exit_Boot.d" "f2803x_common\source\DSP2803x_CSMPasswords.d" "f2803x_common\source\DSP2803x_CodeStartBranch.d" "f2803x_common\source\DSP2803x_DBGIER.d" "f2803x_common\source\DSP2803x_DisInt.d" "f2803x_common\source\DSP2803x_usDelay.d" "f2803x_common\source\F2802x_CSMPasswords.d" "f2803x_common\source\F2802x_DBGIER.d" "f2803x_common\source\F2802x_asmfuncs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

@@ -112,5 +112,5 @@ PDE_DEPS__QUOTED :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-f2802x_common/source \
+f2803x_common/source \
 
