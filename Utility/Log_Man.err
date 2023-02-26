@@ -1,0 +1,54 @@
+Log_Man.rc(39): Warning! W086: col(18) definition of macro 'MEA_I_IN' not identical to previous definition
+Log_Man.rc(39): Note! N393: col(18) included from Log_Man.cpp(2)
+Log_Man.rc(39): Note! N851: col(18) macro 'MEA_I_IN' defined in: Log_Man.rc(1) (col 9)
+Log_Man.rc(40): Warning! W086: col(18) definition of macro 'MEA_V_IN' not identical to previous definition
+Log_Man.rc(40): Note! N851: col(18) macro 'MEA_V_IN' defined in: Log_Man.rc(2) (col 9)
+Log_Man.rc(41): Warning! W086: col(19) definition of macro 'MEA_I_OUT' not identical to previous definition
+Log_Man.rc(41): Note! N851: col(19) macro 'MEA_I_OUT' defined in: Log_Man.rc(3) (col 9)
+Log_Man.rc(42): Warning! W086: col(19) definition of macro 'MEA_V_OUT' not identical to previous definition
+Log_Man.rc(42): Note! N851: col(19) macro 'MEA_V_OUT' defined in: Log_Man.rc(4) (col 9)
+Log_Man.rc(43): Warning! W086: col(18) definition of macro 'MEA_W_IN' not identical to previous definition
+Log_Man.rc(43): Note! N851: col(18) macro 'MEA_W_IN' defined in: Log_Man.rc(5) (col 9)
+Log_Man.rc(44): Warning! W086: col(19) definition of macro 'MEA_W_OUT' not identical to previous definition
+Log_Man.rc(44): Note! N851: col(19) macro 'MEA_W_OUT' defined in: Log_Man.rc(6) (col 9)
+Log_Man.rc(45): Warning! W086: col(18) definition of macro 'MEA_P_IN' not identical to previous definition
+Log_Man.rc(45): Note! N851: col(18) macro 'MEA_P_IN' defined in: Log_Man.rc(7) (col 9)
+Log_Man.rc(46): Warning! W086: col(17) definition of macro 'MEA_Tb1' not identical to previous definition
+Log_Man.rc(46): Note! N851: col(17) macro 'MEA_Tb1' defined in: Log_Man.rc(8) (col 9)
+Log_Man.rc(47): Warning! W086: col(17) definition of macro 'MEA_Tb2' not identical to previous definition
+Log_Man.rc(47): Note! N851: col(17) macro 'MEA_Tb2' defined in: Log_Man.rc(9) (col 9)
+Log_Man.rc(48): Warning! W086: col(18) definition of macro 'MEA_Tpfc' not identical to previous definition
+Log_Man.rc(48): Note! N851: col(18) macro 'MEA_Tpfc' defined in: Log_Man.rc(10) (col 9)
+Log_Man.rc(49): Warning! W086: col(20) definition of macro 'MEA_Tpfc_b' not identical to previous definition
+Log_Man.rc(49): Note! N851: col(20) macro 'MEA_Tpfc_b' defined in: Log_Man.rc(11) (col 9)
+Log_Man.rc(50): Warning! W086: col(19) definition of macro 'MEA_Light' not identical to previous definition
+Log_Man.rc(50): Note! N851: col(19) macro 'MEA_Light' defined in: Log_Man.rc(12) (col 9)
+Log_Man.rc(51): Warning! W086: col(17) definition of macro 'MEA_F_m' not identical to previous definition
+Log_Man.rc(51): Note! N851: col(17) macro 'MEA_F_m' defined in: Log_Man.rc(13) (col 9)
+Log_Man.rc(52): Warning! W086: col(19) definition of macro 'MEA_PWM_m' not identical to previous definition
+Log_Man.rc(52): Note! N851: col(19) macro 'MEA_PWM_m' defined in: Log_Man.rc(14) (col 9)
+Log_Man.rc(53): Warning! W086: col(19) definition of macro 'MEA_I_U_m' not identical to previous definition
+Log_Man.rc(53): Note! N851: col(19) macro 'MEA_I_U_m' defined in: Log_Man.rc(15) (col 9)
+Log_Man.rc(54): Warning! W086: col(18) definition of macro 'MEA_Ph_I' not identical to previous definition
+Log_Man.rc(54): Note! N851: col(18) macro 'MEA_Ph_I' defined in: Log_Man.rc(16) (col 9)
+Log_Man.rc(55): Warning! W086: col(16) definition of macro 'MEA_ei' not identical to previous definition
+Log_Man.rc(55): Note! N851: col(16) macro 'MEA_ei' defined in: Log_Man.rc(17) (col 9)
+Log_Man.rc(56): Warning! W086: col(19) definition of macro 'MEA_acc_i' not identical to previous definition
+Log_Man.rc(56): Note! N851: col(19) macro 'MEA_acc_i' defined in: Log_Man.rc(18) (col 9)
+Log_Man.rc(57): Warning! W086: col(21) definition of macro 'MEA_PID_out' not identical to previous definition
+Log_Man.rc(57): Note! N851: col(21) macro 'MEA_PID_out' defined in: Log_Man.rc(19) (col 9)
+Log_Man.rc(58): Warning! W086: col(20) definition of macro 'MEA_STATUS' not identical to previous definition
+Log_Man.rc(58): Note! N851: col(20) macro 'MEA_STATUS' defined in: Log_Man.rc(20) (col 9)
+Log_Man.cpp(3): Warning! W885: col(2) #endif matches #if in different source file
+Log_Man.cpp(3): Note! N886: col(2) preprocessing directive found in: WatHack.h(1) (col 9)
+Log_Man.cpp(203): Warning! W014: col(1) no reference to symbol 'T'
+Log_Man.cpp(191): Note! N392: col(16) definition: 'double T' in 'int GrabUserInput( void )'
+Log_Man.cpp(410): Warning! W472: col(131) expression with side effect in sizeof discarded
+Log_Man.cpp(410): Warning! W472: col(131) expression with side effect in sizeof discarded
+Log_Man.cpp(420): Warning! W014: col(1) no reference to symbol 'pU32'
+Log_Man.cpp(345): Note! N392: col(13) definition: 'int pU32' in 'int DoButton( int )'
+Log_Man.cpp(438): Warning! W007: col(109) '&array' may not produce intended result
+Log_Man.cpp(511): Warning! W726: col(1) no reference to formal parameter 'DiaId'
+Log_Man.cpp(424): Note! N392: col(51) definition: 'long DiaId' in 'int stdcall (__export PluginEngine)( long, unsigned long, unsigned long, unsigned long )'
+Log_Man.cpp(525): Warning! W726: col(1) no reference to formal parameter 'lpvReserved'
+Log_Man.cpp(513): Note! N392: col(66) definition: 'void * lpvReserved' in 'int stdcall DllMain( HINSTANCE__ *, unsigned long, void * )'

@@ -1,0 +1,41 @@
+!define BLANK ""
+c:\Haltura\Software\Utility\ContrlDX.obj : c:\Haltura\Software\Utility\Contr&
+lDX.cpp .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wpp386 ContrlDX.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -&
+bd -6r -bt=nt -fo=.obj -mf -xs -xr
+
+c:\Haltura\Software\Utility\ContrlPn.obj : c:\Haltura\Software\Utility\Contr&
+lPn.cpp .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wpp386 ContrlPn.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -&
+bd -6r -bt=nt -fo=.obj -mf -xs -xr
+
+c:\Haltura\Software\Utility\ContrlPn.res : c:\Haltura\Software\Utility\Contr&
+lPn.rc .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wrc ContrlPn.rc -bt=nt -dWIN32 -d_WIN32 -d__NT__ -i="$[:;C:\WATCOM/h;C:\WA&
+TCOM/h/nt" -q -ad -r -fo=ContrlPn.res
+
+c:\Haltura\Software\Utility\ContrlPn.dll : c:\Haltura\Software\Utility\Contr&
+lDX.obj c:\Haltura\Software\Utility\ContrlPn.obj c:\Haltura\Software\Utility&
+\ContrlPn.res .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ @%write ContrlPn.lk1 FIL ContrlDX.obj,ContrlPn.obj
+ @%append ContrlPn.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b ContrlPn.imp 
+ @%append ContrlPn.lk1 LIBR ContrlPn.imp
+!endif
+!ifneq BLANK "ContrlPn.res"
+ @%append ContrlPn.lk1 RES ContrlPn.res
+!endif
+ *wlink name ContrlPn d all sys nt_dll op m op nostdcall libp .\dx_sdk\ libr&
+ ddraw.lib,dinput.lib,dxguid.lib,winmm.lib op maxe=25 op q op symf @ContrlPn&
+.lk1
+ wlib -q -n -b ContrlPn.lib +ContrlPn.dll
+

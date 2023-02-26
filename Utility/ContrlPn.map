@@ -1,0 +1,1713 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       22/03/05 21:49:08
+Executable Image: ContrlPn.dll
+creating a Windows NT dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+.idata                          0041a000             00000a69
+DGROUP                          0041b000             000b2240
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           00401000        00000007
+_TEXT                  CODE           AUTO           00401010        00016ecd
+.text                  CODE           AUTO           00417ee0        00001000
+TRANSFER CODE          CODE           AUTO           00418ee0        0000022e
+.idata                 .idata         .idata         0041a000        00000a69
+_NULL                  BEGDATA        DGROUP         0041b000        00000004
+_AFTERNULL             BEGDATA        DGROUP         0041b004        00000000
+CONST                  DATA           DGROUP         0041b004        00000694
+CONST2                 DATA           DGROUP         0041b6a0        0000115c
+_DATA                  DATA           DGROUP         0041c800        00007c34
+XIB                    DATA           DGROUP         00424434        00000000
+XI                     DATA           DGROUP         00424434        00000054
+XIE                    DATA           DGROUP         00424488        00000000
+YIB                    DATA           DGROUP         00424488        00000000
+YI                     DATA           DGROUP         00424488        00000030
+YIE                    DATA           DGROUP         004244b8        00000000
+.rdata                 DATA           DGROUP         004244b8        000022b8
+TIB                    DATA           DGROUP         00426770        00000000
+TI                     DATA           DGROUP         00426770        00000000
+TIE                    DATA           DGROUP         00426770        00000000
+DATA                   DATA           DGROUP         00426770        00000000
+_BSS                   BSS            DGROUP         00427000        000a6231
+STACK                  STACK          DGROUP         004cd240        00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: ContrlDX.obj(C:\Haltura\Software\Utility\ContrlDX.cpp)
+00401043*      void near ShowError()
+004010a3+      long near V_CollectMode( _DDSURFACEDESC near *, void near * )
+004012cc+      int near V_CreateSurfaces()
+00401379+      int near I_AttachDInput( HWND__ near * )
+00401465+      int near DX_Init( int near *, int near *, int, HWND__ near * )
+00401637+      int near V_Create_R_W_Surface( long unsigned, long unsigned, IDirectDrawSurface near * near * )
+004016bb+      int near V_Create_WO_Surface( long unsigned, long unsigned, IDirectDrawSurface near * near * )
+0040173f*      int near V_FadeOut_Everything( int )
+00401d86+      int near V_RedrawAll()
+00401f40+      int near V_SetMode( int, int, int )
+0040206e*      int near V_GetMode( int near *, int near *, int near *, int unsigned )
+0040215e+      int near DX_DeInit()
+00402276+      void near ResetDithering()
+004022b3+      int unsigned near BGRtoCard( int, int, int )
+004028d4*      int near V_RestorePatch( Texture near * )
+00402de6+      int near V_TextureInit( Texture near *, char near *, int, int unsigned, int unsigned )
+0040345e+      int near G_Init( HWND__ near * )
+0040435f+      void near V_PrintDigits( int, int, int, int, int )
+004044ac+      int near V_PropagateColoredGraph( float near *, int, int, Texture near * )
+004047c7+      int near V_DrawEMField( float, Texture near * )
+00404d09+      int near DX_Restore()
+00404da2+      int near G_Reaction()
+00405346+      int near C_ProcessControl( int )
+0040541e+      int near C_GetClickedControl( int, int )
+00437004+      IDirectDraw near * near lpDD
+00437008+      IDirectDrawSurface near * near S_Main
+0043700c+      IDirectDrawSurface near * near S_Back
+00437010+      IDirectDrawPalette near * near PalPtr
+00437018+      tagPALETTEENTRY near Palette[]
+00437418+      char unsigned near PalRed[]
+00437518+      __55r6gjModeLine near * near Modes
+0043751c+      int near NModes
+00437520+      __anonymous_enum near Images
+00437521+      __anonymous_enum near Rectangles
+00437524+      int near PStDefX
+00437528+      int near PStDefY
+0043752c+      int near ScrollX
+00437530+      int near ScrollY
+00437534+      int near ScrW
+00437538+      int near ScrH
+0041c800+      _DDSURFACEDESC near UserPreferred
+0041c86c+      Texture near Textures[]
+0041fcec+      __579rpqControls near Controls[]
+0041fef4+      int near ColSea
+0041fef8+      int near ColSky
+0041fefc+      long unsigned near CRandU
+0043753c+      int near ScrBPP
+00437540+      int near ColorRS
+00437544+      int near ColorGS
+00437548+      int near ColorBS
+0043754c+      int near ColorRD
+00437550+      int near ColorGD
+00437554+      int near ColorBD
+00437558+      char near WaterLoop
+0043755c+      int near OldFagSizeLimit
+00437560+      IDirectInputA near * near dinput
+00437564+      IDirectInputDeviceA near * near keyboard
+00437568+      int near RestR
+0043756c+      int near RestG
+00437570+      int near RestB
+0043757c+      EMPixel near * near PixelList
+00437580+      int near PixelCount
+00437584+      int near * near EMFGr
+00437588+      int near FirstColor
+0043758c+      float near LastSpeed
+00437590+      int near DelayCount
+00437594+      int near Active
+00437598+      long unsigned near LastT
+004054d4+      long near WindowFunc( HWND__ near *, int unsigned, int unsigned, long )
+004056e9       int near DirectXEngine( HINSTANCE__ near * )
+004376a0+      int near HoldedKey
+004376a4+      HWND__ near * near BlackBgndWin
+004376a8+      HBRUSH__ near * near BlackBrush
+004376ac+      tagWNDCLASSA near BlackBgndClass
+Module: ContrlPn.obj(c:\Haltura\Software\Utility\ContrlPn.cpp)
+0040592f+      int near AddDash( char near *, int, int, int, int, int, int, int )
+00405b4e+      int near RearrangeGraphs( int )
+00405d77+      int near NotifyDirectXThread()
+0040604c+      void near SyncGlobalsWithThread()
+00406104+      int near DedicatedUpdateGraphs()
+00406367*      int near GrabUserInput()
+004376e0       _DXData volatile near DXData
+00437710       _DXReq volatile near DXReq
+0043771c       float volatile near LoopedGraph[]
+0043b71c       int volatile near LoopedGraphIndex
+0043b720       int volatile near RequestedW
+0043b724       int volatile near RequestedH
+0043b728+      HINSTANCE__ near * near hinst
+0043b72c+      int (near * near DialogEngine)( long unsigned, long unsigned, long unsigned )
+0043b730+      int (near * near NetEngine)( long unsigned, long unsigned, long unsigned )
+0043b734+      int near MyDialogID
+0043b738+      int near CanvasID
+0043b73c+      void near * near DiaTemplate
+0043b740+      int near * near IncomingBuffer
+0043b748+      std::fstream near Log
+0043b7d0+      int near DoLog
+0043b7d4+      int near DoWarning
+0043b7d8+      long unsigned near TrakDeadTime
+00420310+      tModbusADC near ModbusADC
+00420368+      __3frcooModbusADCFlags near ModbusADCFlags
+00420374+      long unsigned near LastTimestamp
+00420378+      int near NoDraw
+00420380+      __bmpt5ModbusADCGUI near ModbusADCGUI[]
+004228a8+      char near ParamHeaderString[]
+0043b7e0+      char near GraphArea[]
+004cb7e0+      __anonymous_enum near ModbusADCList
+004cb7e4+      long unsigned near TimestampStep
+004cb7e8+      double near BiggestAmperage
+004cb7f0+      double near Fullscreen
+004228e0+      double near kEff
+004cbbf8+      int near LastConnState
+004cbbfc       HWND__ near * volatile near DXhWnd
+004063cf+      int near DoButton( int )
+004065f1+      _PluginEngine@16
+004070b8       _DllMain@12
+Module: C:\WATCOM/lib386/nt\clib3r.lib(stk)
+00407151       __CHK
+00407161*      __STK
+00407180       __STKOVERFLOW_
+00407190       __GRO
+004071b0*      __alloca_probe
+Module: C:\WATCOM/lib386/nt\clib3r.lib(nrealloc.c)
+004071d0*      _nrealloc_
+004071d0       realloc_
+Module: .\dx_sdk\dxguid.lib(..\dxguid.cpp)
+004244b8*      _IID_IDxDiagContainer
+004244c8*      _IID_IDxDiagProvider
+004244d8*      _CLSID_DxDiagProvider
+004244e8*      _KSDATAFORMAT_SUBTYPE_DIRECTMUSIC
+004244f8*      _KSDATAFORMAT_SUBTYPE_MIDI
+00424508*      _IID_IKsControl
+00424518*      _IID_IDirectMusicAudioPath
+00424528*      _IID_IDirectMusicContainer
+00424538*      _IID_IDirectMusicScript
+00424548*      _IID_IDirectMusicPatternTrack
+00424558*      _IID_IDirectMusicStyle8
+00424568*      _IID_IDirectMusicSegmentState8
+00424578*      _IID_IDirectMusicSegment8
+00424588*      _IID_IDirectMusicPerformance8
+00424598*      _IID_IDirectMusicLoader8
+004245a8*      _IID_IDirectMusicSegment2
+004245b8*      _IID_IDirectMusicPerformance2
+004245c8*      _IID_IDirectMusicBand
+004245d8*      _IID_IDirectMusicComposer
+004245e8*      _IID_IDirectMusicChordMap
+004245f8*      _IID_IDirectMusicStyle
+00424608*      _IID_IDirectMusicGraph
+00424618*      _IID_IDirectMusicPerformance
+00424628*      _IID_IDirectMusicSegmentState
+00424638*      _IID_IDirectMusicSegment
+00424648*      _IID_IDirectMusicObject
+00424658*      _IID_IDirectMusicGetLoader
+00424668*      _IID_IDirectMusicLoader
+00424678*      _GUID_Buffer_Mono
+00424688*      _GUID_Buffer_3D_Dry
+00424698*      _GUID_Buffer_Stereo
+004246a8*      _GUID_Buffer_EnvReverb
+004246b8*      _GUID_Buffer_Reverb
+004246c8*      _GUID_Synth_Default
+004246d8*      _GUID_DefaultGMCollection
+004246e8*      _GUID_PerfAutoDownload
+004246f8*      _GUID_PerfMasterGrooveLevel
+00424708*      _GUID_PerfMasterVolume
+00424718*      _GUID_PerfMasterTempo
+00424728*      _GUID_UnloadFromAudioPath
+00424738*      _GUID_DownloadToAudioPath
+00424748*      _GUID_Variations
+00424758*      _GUID_SeedVariations
+00424768*      _GUID_EnableTempo
+00424778*      _GUID_DisableTempo
+00424788*      _GUID_EnableTimeSig
+00424798*      _GUID_DisableTimeSig
+004247a8*      _GUID_StandardMIDIFile
+004247b8*      _GUID_Clear_All_Bands
+004247c8*      _GUID_Disable_Auto_Download
+004247d8*      _GUID_Enable_Auto_Download
+004247e8*      _GUID_ConnectToDLSCollection
+004247f8*      _GUID_Unload
+00424808*      _GUID_Download
+00424818*      _GUID_MuteParam
+00424828*      _GUID_IDirectMusicChordMap
+00424838*      _GUID_IDirectMusicBand
+00424848*      _GUID_BandParam
+00424858*      _GUID_Play_Marker
+00424868*      _GUID_Valid_Start_Time
+00424878*      _GUID_TempoParam
+00424888*      _GUID_TimeSignature
+00424898*      _GUID_IDirectMusicStyle
+004248a8*      _GUID_RhythmParam
+004248b8*      _GUID_ChordParam
+004248c8*      _GUID_CommandParamNext
+004248d8*      _GUID_CommandParam2
+004248e8*      _GUID_CommandParam
+004248f8*      _GUID_NOTIFICATION_RECOMPOSE
+00424908*      _GUID_NOTIFICATION_COMMAND
+00424918*      _GUID_NOTIFICATION_CHORD
+00424928*      _GUID_NOTIFICATION_MEASUREANDBEAT
+00424938*      _GUID_NOTIFICATION_PERFORMANCE
+00424948*      _GUID_NOTIFICATION_SEGMENT
+00424958*      _GUID_DirectMusicAllTypes
+00424968*      _CLSID_DirectMusicAudioPathConfig
+00424978*      _CLSID_DirectSoundWave
+00424988*      _CLSID_DirectMusicContainer
+00424998*      _CLSID_DirectMusicScript
+004249a8*      _CLSID_DirectMusicPatternTrack
+004249b8*      _CLSID_DirectMusicBand
+004249c8*      _CLSID_DirectMusicLoader
+004249d8*      _CLSID_DirectMusicComposer
+004249e8*      _CLSID_DirectMusicChordMap
+004249f8*      _CLSID_DirectMusicStyle
+00424a08*      _CLSID_DirectMusicGraph
+00424a18*      _CLSID_DirectMusicSegmentState
+00424a28*      _CLSID_DirectMusicSegment
+00424a38*      _CLSID_DirectMusicPerformance
+00424a48*      _IID_IDirectMusicTrack8
+00424a58*      _IID_IDirectMusicTool8
+00424a68*      _IID_IDirectMusicTool
+00424a78*      _IID_IDirectMusicTrack
+00424a88*      _CLSID_DirectMusicWaveTrack
+00424a98*      _CLSID_DirectMusicParamControlTrack
+00424aa8*      _CLSID_DirectMusicLyricsTrack
+00424ab8*      _CLSID_DirectMusicSegmentTriggerTrack
+00424ac8*      _CLSID_DirectMusicMarkerTrack
+00424ad8*      _CLSID_DirectMusicScriptTrack
+00424ae8*      _CLSID_DirectMusicMuteTrack
+00424af8*      _CLSID_DirectMusicChordMapTrack
+00424b08*      _CLSID_DirectMusicBandTrack
+00424b18*      _CLSID_DirectMusicSignPostTrack
+00424b28*      _CLSID_DirectMusicMotifTrack
+00424b38*      _CLSID_DirectMusicStyleTrack
+00424b48*      _CLSID_DirectMusicCommandTrack
+00424b58*      _CLSID_DirectMusicChordTrack
+00424b68*      _CLSID_DirectMusicTimeSigTrack
+00424b78*      _CLSID_DirectMusicSysExTrack
+00424b88*      _CLSID_DirectMusicSeqTrack
+00424b98*      _CLSID_DirectMusicTempoTrack
+00424ba8*      _GUID_DMUS_PROP_Volume
+00424bb8*      _GUID_DMUS_PROP_LegacyCaps
+00424bc8*      _GUID_DMUS_PROP_Effects
+00424bd8*      _GUID_DMUS_PROP_WavesReverb
+00424be8*      _GUID_DMUS_PROP_MemorySize
+00424bf8*      _GUID_DMUS_PROP_WritePeriod
+00424c08*      _GUID_DMUS_PROP_WriteLatency
+00424c18*      _GUID_DMUS_PROP_SamplePlaybackRate
+00424c28*      _GUID_DMUS_PROP_SampleMemorySize
+00424c38*      _GUID_DMUS_PROP_SynthSink_WAVE
+00424c48*      _GUID_DMUS_PROP_SynthSink_DSOUND
+00424c58*      _GUID_DMUS_PROP_INSTRUMENT2
+00424c68*      _GUID_DMUS_PROP_DLS2
+00424c78*      _GUID_DMUS_PROP_DLS1
+00424c88*      _GUID_DMUS_PROP_GS_Capable
+00424c98*      _GUID_DMUS_PROP_XG_Capable
+00424ca8*      _GUID_DMUS_PROP_XG_Hardware
+00424cb8*      _GUID_DMUS_PROP_GS_Hardware
+00424cc8*      _GUID_DMUS_PROP_GM_Hardware
+00424cd8*      _IID_IDirectMusic8
+00424ce8*      _IID_IDirectMusic2
+00424cf8*      _IID_IDirectMusicDownloadedInstrument
+00424d08*      _IID_IDirectMusicInstrument
+00424d18*      _IID_IDirectMusicCollection
+00424d28*      _IID_IDirectMusicDownload
+00424d38*      _IID_IDirectMusicPortDownload
+00424d48*      _IID_IDirectMusicThru
+00424d58*      _IID_IDirectMusicPort
+00424d68*      _IID_IDirectMusicBuffer
+00424d78*      _IID_IDirectMusic
+00424d88*      _CLSID_DirectMusicSynth
+00424d98*      _CLSID_DirectMusicCollection
+00424da8*      _CLSID_DirectMusic
+00424db8*      _IID_IDirectPlay8LobbyClient
+00424dc8*      _IID_IDirectPlay8LobbiedApplication
+00424dd8*      _CLSID_DirectPlay8LobbyClient
+00424de8*      _CLSID_DirectPlay8LobbiedApplication
+00424df8*      _CLSID_DP8SP_BLUETOOTH
+00424e08*      _CLSID_DP8SP_TCPIP
+00424e18*      _CLSID_DP8SP_SERIAL
+00424e28*      _CLSID_DP8SP_MODEM
+00424e38*      _CLSID_DP8SP_IPX
+00424e48*      _IID_IDirectPlay8NATResolver
+00424e58*      _IID_IDirectPlay8ThreadPool
+00424e68*      _IID_IDirectPlay8Peer
+00424e78*      _IID_IDirectPlay8Server
+00424e88*      _IID_IDirectPlay8Client
+00424e98*      _CLSID_DirectPlay8NATResolver
+00424ea8*      _CLSID_DirectPlay8ThreadPool
+00424eb8*      _CLSID_DirectPlay8Peer
+00424ec8*      _CLSID_DirectPlay8Server
+00424ed8*      _CLSID_DirectPlay8Client
+00424ee8*      _IID_IDirectPlay8AddressIP
+00424ef8*      _IID_IDirectPlay8Address
+00424f08*      _CLSID_DirectPlay8Address
+00424f18*      _DPVCTGUID_VR12
+00424f28*      _DPVCTGUID_TRUESPEECH
+00424f38*      _DPVCTGUID_SC06
+00424f48*      _DPVCTGUID_SC03
+00424f58*      _DPVCTGUID_NONE
+00424f68*      _DPVCTGUID_GSM
+00424f78*      _DPVCTGUID_ADPCM
+00424f88*      _IID_IDirectPlayVoiceTest
+00424f98*      _IID_IDirectPlayVoiceServer
+00424fa8*      _IID_IDirectPlayVoiceClient
+00424fb8*      _CLSID_DirectPlayVoiceTest
+00424fc8*      _CLSID_DirectPlayVoiceServer
+00424fd8*      _CLSID_DirectPlayVoiceClient
+00424fe8*      _GUID_DSCFX_SYSTEM_NS
+00424ff8*      _GUID_DSCFX_MS_NS
+00425008*      _GUID_DSCFX_CLASS_NS
+00425018*      _GUID_DSCFX_SYSTEM_AEC
+00425028*      _GUID_DSCFX_MS_AEC
+00425038*      _GUID_DSCFX_CLASS_AEC
+00425048*      _GUID_DSFX_WAVES_REVERB
+00425058*      _GUID_DSFX_STANDARD_I3DL2REVERB
+00425068*      _GUID_DSFX_STANDARD_PARAMEQ
+00425078*      _GUID_DSFX_STANDARD_COMPRESSOR
+00425088*      _GUID_DSFX_STANDARD_DISTORTION
+00425098*      _GUID_DSFX_STANDARD_ECHO
+004250a8*      _GUID_DSFX_STANDARD_FLANGER
+004250b8*      _GUID_DSFX_STANDARD_CHORUS
+004250c8*      _GUID_DSFX_STANDARD_GARGLE
+004250d8*      _DS3DALG_HRTF_LIGHT
+004250e8*      _DS3DALG_HRTF_FULL
+004250f8*      _DS3DALG_NO_VIRTUALIZATION
+00425108*      _IID_IDirectSoundFullDuplex
+00425118*      _IID_IDirectSoundCaptureFXNoiseSuppress
+00425128*      _IID_IDirectSoundCaptureFXAec
+00425138*      _IID_IDirectSoundFXWavesReverb
+00425148*      _IID_IDirectSoundFXI3DL2Reverb
+00425158*      _IID_IDirectSoundFXParamEq
+00425168*      _IID_IDirectSoundFXCompressor
+00425178*      _IID_IDirectSoundFXDistortion
+00425188*      _IID_IDirectSoundFXEcho
+00425198*      _IID_IDirectSoundFXFlanger
+004251a8*      _IID_IDirectSoundFXChorus
+004251b8*      _IID_IDirectSoundFXGargle
+004251c8*      _IID_IKsPropertySet
+004251d8*      _IID_IDirectSoundNotify
+004251e8*      _IID_IDirectSoundCaptureBuffer8
+004251f8*      _IID_IDirectSoundCaptureBuffer
+00425208*      _IID_IDirectSoundCapture
+00425218*      _IID_IDirectSound3DBuffer
+00425228*      _IID_IDirectSound3DListener
+00425238*      _GUID_All_Objects
+00425248*      _IID_IDirectSoundBuffer8
+00425258*      _IID_IDirectSoundBuffer
+00425268*      _IID_IDirectSound8
+00425278*      _IID_IDirectSound
+00425288*      _IID_IReferenceClock
+00425298*      _DSDEVID_DefaultVoiceCapture
+004252a8*      _DSDEVID_DefaultVoicePlayback
+004252b8*      _DSDEVID_DefaultCapture
+004252c8*      _DSDEVID_DefaultPlayback
+004252d8*      _CLSID_DirectSoundFullDuplex
+004252e8*      _CLSID_DirectSoundCapture8
+004252f8*      _CLSID_DirectSoundCapture
+00425308*      _CLSID_DirectSound8
+00425318*      _CLSID_DirectSound
+00425328*      _DPAID_ComPort
+00425338*      _DPAID_INetPort
+00425348*      _DPAID_INetW
+00425358*      _DPAID_INet
+00425368*      _DPAID_ModemW
+00425378*      _DPAID_Modem
+00425388*      _DPAID_PhoneW
+00425398*      _DPAID_Phone
+004253a8*      _DPAID_LobbyProvider
+004253b8*      _DPAID_ServiceProvider
+004253c8*      _DPAID_TotalSize
+004253d8*      _DPLPROPERTY_PlayerScore
+004253e8*      _DPLPROPERTY_PlayerGuid
+004253f8*      _DPLPROPERTY_LobbyGuid
+00425408*      _DPLPROPERTY_MessagesSupported
+00425418*      _CLSID_DirectPlayLobby
+00425428*      _IID_IDirectPlayLobby3A
+00425438*      _IID_IDirectPlayLobby3
+00425448*      _IID_IDirectPlayLobby2A
+00425458*      _IID_IDirectPlayLobby2
+00425468*      _IID_IDirectPlayLobbyA
+00425478*      _IID_IDirectPlayLobby
+00425488*      _IID_IDirectPlay
+00425498*      _DPSPGUID_MODEM
+004254a8*      _DPSPGUID_SERIAL
+004254b8*      _DPSPGUID_TCPIP
+004254c8*      _DPSPGUID_IPX
+004254d8*      _CLSID_DirectPlay
+004254e8*      _IID_IDirectPlay4A
+004254f8*      _IID_IDirectPlay4
+00425508*      _IID_IDirectPlay3A
+00425518*      _IID_IDirectPlay3
+00425528*      _IID_IDirectPlay2A
+00425538*      _IID_IDirectPlay2
+00425548*      _GUID_HIDClass
+00425558*      _GUID_MouseClass
+00425568*      _GUID_MediaClass
+00425578*      _GUID_KeyboardClass
+00425588*      _IID_IDirectInputJoyConfig8
+00425598*      _IID_IDirectInputPIDDriver
+004255a8*      _IID_IDirectInputJoyConfig
+004255b8*      _IID_IDirectInputEffectDriver
+004255c8*      _GUID_CustomForce
+004255d8*      _GUID_Friction
+004255e8*      _GUID_Inertia
+004255f8*      _GUID_Damper
+00425608*      _GUID_Spring
+00425618*      _GUID_SawtoothDown
+00425628*      _GUID_SawtoothUp
+00425638*      _GUID_Triangle
+00425648*      _GUID_Sine
+00425658*      _GUID_Square
+00425668*      _GUID_RampForce
+00425678*      _GUID_ConstantForce
+00425688*      _GUID_SysKeyboardEm2
+00425698*      _GUID_SysKeyboardEm
+004256a8*      _GUID_SysMouseEm2
+004256b8*      _GUID_SysMouseEm
+004256c8*      _GUID_Joystick
+004256d8       _GUID_SysKeyboard
+004256e8*      _GUID_SysMouse
+004256f8*      _GUID_Unknown
+00425708*      _GUID_POV
+00425718       _GUID_Key
+00425728*      _GUID_Button
+00425738*      _GUID_Slider
+00425748*      _GUID_RzAxis
+00425758*      _GUID_RyAxis
+00425768*      _GUID_RxAxis
+00425778*      _GUID_ZAxis
+00425788*      _GUID_YAxis
+00425798*      _GUID_XAxis
+004257a8*      _IID_IDirectInputEffect
+004257b8*      _IID_IDirectInputDevice8W
+004257c8*      _IID_IDirectInputDevice8A
+004257d8*      _IID_IDirectInputDevice7W
+004257e8*      _IID_IDirectInputDevice7A
+004257f8*      _IID_IDirectInputDevice2W
+00425808*      _IID_IDirectInputDevice2A
+00425818*      _IID_IDirectInputDeviceW
+00425828*      _IID_IDirectInputDeviceA
+00425838*      _IID_IDirectInput8W
+00425848*      _IID_IDirectInput8A
+00425858*      _IID_IDirectInput7W
+00425868*      _IID_IDirectInput7A
+00425878*      _IID_IDirectInput2W
+00425888*      _IID_IDirectInput2A
+00425898*      _IID_IDirectInputW
+004258a8*      _IID_IDirectInputA
+004258b8*      _CLSID_DirectInputDevice8
+004258c8*      _CLSID_DirectInput8
+004258d8*      _CLSID_DirectInputDevice
+004258e8*      _CLSID_DirectInput
+004258f8*      _TID_DXFILEHeader
+00425908*      _IID_IDirectXFileBinary
+00425918*      _IID_IDirectXFileDataReference
+00425928*      _IID_IDirectXFileData
+00425938*      _IID_IDirectXFileObject
+00425948*      _IID_IDirectXFileSaveObject
+00425958*      _IID_IDirectXFileEnumObject
+00425968*      _IID_IDirectXFile
+00425978*      _CLSID_CDirectXFile
+00425988*      _TID_D3DRMRightHanded
+00425998*      _TID_D3DRMPropertyBag
+004259a8*      _TID_D3DRMStringProperty
+004259b8*      _TID_D3DRMExternalVisual
+004259c8*      _TID_D3DRMProgressiveMesh
+004259d8*      _TID_D3DRMUrl
+004259e8*      _TID_D3DRMInlineData
+004259f8*      _TID_D3DRMLightAttenuation
+00425a08*      _TID_D3DRMLightPenumbra
+00425a18*      _TID_D3DRMLightRange
+00425a28*      _TID_D3DRMLightUmbra
+00425a38*      _TID_D3DRMAppData
+00425a48*      _TID_D3DRMCamera
+00425a58*      _TID_D3DRMLight
+00425a68*      _TID_D3DRMFrameRotation
+00425a78*      _TID_D3DRMFrameVelocity
+00425a88*      _TID_D3DRMFramePosition
+00425a98*      _TID_D3DRMAnimationOptions
+00425aa8*      _TID_D3DRMTimedFloatKeys
+00425ab8*      _TID_D3DRMBoolean2d
+00425ac8*      _TID_D3DRMMeshFaceWraps
+00425ad8*      _TID_D3DRMBoolean
+00425ae8*      _TID_D3DRMMaterialWrap
+00425af8*      _TID_D3DRMMeshVertexColors
+00425b08*      _TID_D3DRMIndexedColor
+00425b18*      _TID_D3DRMTextureReference
+00425b28*      _TID_D3DRMTextureFilename
+00425b38*      _TID_D3DRMGuid
+00425b48*      _TID_D3DRMColorRGB
+00425b58*      _TID_D3DRMColorRGBA
+00425b68*      _TID_D3DRMMaterialPower
+00425b78*      _TID_D3DRMMaterialEmissiveColor
+00425b88*      _TID_D3DRMMaterialSpecularColor
+00425b98*      _TID_D3DRMMaterialDiffuseColor
+00425ba8*      _TID_D3DRMMaterialAmbientColor
+00425bb8*      _TID_D3DRMFloatKeys
+00425bc8*      _TID_D3DRMAnimationKey
+00425bd8*      _TID_D3DRMAnimationSet
+00425be8*      _TID_D3DRMAnimation
+00425bf8*      _TID_D3DRMMatrix4x4
+00425c08*      _TID_D3DRMCoords2d
+00425c18*      _TID_D3DRMMeshNormals
+00425c28*      _TID_D3DRMMeshTextureCoords
+00425c38*      _TID_D3DRMMeshMaterialList
+00425c48*      _TID_D3DRMFrameTransformMatrix
+00425c58*      _TID_D3DRMFrame
+00425c68*      _TID_D3DRMMaterialArray
+00425c78*      _TID_D3DRMMaterial
+00425c88*      _TID_D3DRMMeshFace
+00425c98*      _TID_D3DRMVector
+00425ca8*      _TID_D3DRMMesh
+00425cb8*      _TID_D3DRMInfo
+00425cc8*      _IID_IDirect3DRMWinDevice
+00425cd8*      _CLSID_CDirect3DRM
+00425ce8*      _IID_IDirect3DRM3
+00425cf8*      _IID_IDirect3DRM2
+00425d08*      _IID_IDirect3DRM
+00425d18*      _IID_IDirect3DRMClippedVisual
+00425d28*      _IID_IDirect3DRMPicked2Array
+00425d38*      _IID_IDirect3DRMProgressiveMesh
+00425d48*      _IID_IDirect3DRMInterpolator
+00425d58*      _IID_IDirect3DRMShadow2
+00425d68*      _IID_IDirect3DRMShadow
+00425d78*      _IID_IDirect3DRMUserVisual
+00425d88*      _IID_IDirect3DRMAnimationArray
+00425d98*      _IID_IDirect3DRMFaceArray
+00425da8*      _IID_IDirect3DRMPickedArray
+00425db8*      _IID_IDirect3DRMLightArray
+00425dc8*      _IID_IDirect3DRMVisualArray
+00425dd8*      _IID_IDirect3DRMFrameArray
+00425de8*      _IID_IDirect3DRMViewportArray
+00425df8*      _IID_IDirect3DRMDeviceArray
+00425e08*      _IID_IDirect3DRMObjectArray
+00425e18*      _IID_IDirect3DRMAnimationSet2
+00425e28*      _IID_IDirect3DRMAnimationSet
+00425e38*      _IID_IDirect3DRMAnimation2
+00425e48*      _IID_IDirect3DRMAnimation
+00425e58*      _IID_IDirect3DRMMaterial2
+00425e68*      _IID_IDirect3DRMMaterial
+00425e78*      _IID_IDirect3DRMWrap
+00425e88*      _IID_IDirect3DRMTexture3
+00425e98*      _IID_IDirect3DRMTexture2
+00425ea8*      _IID_IDirect3DRMTexture
+00425eb8*      _IID_IDirect3DRMLight
+00425ec8*      _IID_IDirect3DRMFace2
+00425ed8*      _IID_IDirect3DRMFace
+00425ee8*      _IID_IDirect3DRMMeshBuilder3
+00425ef8*      _IID_IDirect3DRMMeshBuilder2
+00425f08*      _IID_IDirect3DRMMeshBuilder
+00425f18*      _IID_IDirect3DRMMesh
+00425f28*      _IID_IDirect3DRMVisual
+00425f38*      _IID_IDirect3DRMFrame3
+00425f48*      _IID_IDirect3DRMFrame2
+00425f58*      _IID_IDirect3DRMFrame
+00425f68*      _IID_IDirect3DRMViewport2
+00425f78*      _IID_IDirect3DRMViewport
+00425f88*      _IID_IDirect3DRMDevice3
+00425f98*      _IID_IDirect3DRMDevice2
+00425fa8*      _IID_IDirect3DRMDevice
+00425fb8*      _IID_IDirect3DRMObject2
+00425fc8*      _IID_IDirect3DRMObject
+00425fd8*      _CLSID_CDirect3DRMClippedVisual
+00425fe8*      _CLSID_CDirect3DRMProgressiveMesh
+00425ff8*      _CLSID_CDirect3DRMTextureInterpolator
+00426008*      _CLSID_CDirect3DRMMaterialInterpolator
+00426018*      _CLSID_CDirect3DRMLightInterpolator
+00426028*      _CLSID_CDirect3DRMMeshInterpolator
+00426038*      _CLSID_CDirect3DRMFrameInterpolator
+00426048*      _CLSID_CDirect3DRMViewportInterpolator
+00426058*      _CLSID_CDirect3DRMShadow
+00426068*      _CLSID_CDirect3DRMUserVisual
+00426078*      _CLSID_CDirect3DRMAnimationSet
+00426088*      _CLSID_CDirect3DRMAnimation
+00426098*      _CLSID_CDirect3DRMMaterial
+004260a8*      _CLSID_CDirect3DRMWrap
+004260b8*      _CLSID_CDirect3DRMTexture
+004260c8*      _CLSID_CDirect3DRMLight
+004260d8*      _CLSID_CDirect3DRMFace
+004260e8*      _CLSID_CDirect3DRMMeshBuilder
+004260f8*      _CLSID_CDirect3DRMMesh
+00426108*      _CLSID_CDirect3DRMFrame
+00426118*      _CLSID_CDirect3DRMViewport
+00426128*      _CLSID_CDirect3DRMDevice
+00426138*      _IID_IDirect3DSwapChain8
+00426148*      _IID_IDirect3DVolume8
+00426158*      _IID_IDirect3DSurface8
+00426168*      _IID_IDirect3DIndexBuffer8
+00426178*      _IID_IDirect3DVertexBuffer8
+00426188*      _IID_IDirect3DVolumeTexture8
+00426198*      _IID_IDirect3DCubeTexture8
+004261a8*      _IID_IDirect3DTexture8
+004261b8*      _IID_IDirect3DBaseTexture8
+004261c8*      _IID_IDirect3DResource8
+004261d8*      _IID_IDirect3DDevice8
+004261e8*      _IID_IDirect3D8
+004261f8*      _IID_IDirect3DVertexBuffer7
+00426208*      _IID_IDirect3DVertexBuffer
+00426218*      _IID_IDirect3DViewport3
+00426228*      _IID_IDirect3DViewport2
+00426238*      _IID_IDirect3DViewport
+00426248*      _IID_IDirect3DExecuteBuffer
+00426258*      _IID_IDirect3DMaterial3
+00426268*      _IID_IDirect3DMaterial2
+00426278*      _IID_IDirect3DMaterial
+00426288*      _IID_IDirect3DLight
+00426298*      _IID_IDirect3DTexture2
+004262a8*      _IID_IDirect3DTexture
+004262b8*      _IID_IDirect3DDevice7
+004262c8*      _IID_IDirect3DDevice3
+004262d8*      _IID_IDirect3DDevice2
+004262e8*      _IID_IDirect3DDevice
+004262f8*      _IID_IDirect3DTnLHalDevice
+00426308*      _IID_IDirect3DNullDevice
+00426318*      _IID_IDirect3DRefDevice
+00426328*      _IID_IDirect3DMMXDevice
+00426338*      _IID_IDirect3DHALDevice
+00426348*      _IID_IDirect3DRGBDevice
+00426358*      _IID_IDirect3DRampDevice
+00426368*      _IID_IDirect3D7
+00426378*      _IID_IDirect3D3
+00426388*      _IID_IDirect3D2
+00426398*      _IID_IDirect3D
+004263a8*      _DDVPTYPE_PHILIPS
+004263b8*      _DDVPTYPE_BROOKTREE
+004263c8*      _DDVPTYPE_CCIR656
+004263d8*      _DDVPTYPE_E_HREFL_VREFL
+004263e8*      _DDVPTYPE_E_HREFL_VREFH
+004263f8*      _DDVPTYPE_E_HREFH_VREFL
+00426408*      _DDVPTYPE_E_HREFH_VREFH
+00426418*      _IID_IDirectDrawVideoPortNotify
+00426428*      _IID_IDirectDrawVideoPort
+00426438*      _IID_IDDVideoPortContainer
+00426448*      _IID_IXACTEngine
+00426458*      _CLSID_XACTDebugEngine
+00426468*      _CLSID_XACTAuditionEngine
+00426478*      _CLSID_XACTEngine
+00426488*      _GUID_DDMoreCaps
+00426498*      _GUID_Miscellaneous2Callbacks
+004264a8*      _GUID_NTCallbacks
+004264b8*      _GUID_MotionCompCallbacks
+004264c8*      _GUID_D3DParseUnknownCommandCallback
+004264d8*      _GUID_UserModeDriverPassword
+004264e8*      _GUID_UserModeDriverInfo
+004264f8*      _GUID_OptSurfaceUmodeInfo
+00426508*      _GUID_OptSurfaceKmodeInfo
+00426518*      _GUID_DDStereoMode
+00426528*      _GUID_DDMoreSurfaceCaps
+00426538*      _GUID_ZPixelFormats
+00426548*      _GUID_D3DExtendedCaps
+00426558*      _GUID_KernelCaps
+00426568*      _GUID_KernelCallbacks
+00426578*      _GUID_NonLocalVidMemCaps
+00426588*      _GUID_D3DCallbacks3
+00426598*      _GUID_D3DCallbacks2
+004265a8*      _GUID_VideoPortCaps
+004265b8*      _GUID_ColorControlCallbacks
+004265c8*      _GUID_VideoPortCallbacks
+004265d8*      _GUID_MiscellaneousCallbacks
+004265e8*      _IID_IDirectDrawGammaControl
+004265f8*      _IID_IDirectDrawColorControl
+00426608*      _IID_IDirectDrawClipper
+00426618*      _IID_IDirectDrawPalette
+00426628*      _IID_IDirectDrawPalette2
+00426638*      _IID_IDirectDrawOptSurface
+00426648*      _GUID_DirectDrawPaletteStream
+00426658*      _GUID_DirectDrawSurfaceStream
+00426668*      _IID_IDirectDrawFactory2
+00426678*      _CLSID_DirectDrawFactory2
+00426688*      _IID_IDirectDrawSurfaceNew
+00426698*      _IID_IDirectDrawSurface7
+004266a8*      _IID_IDirectDrawSurface4
+004266b8*      _IID_IDirectDrawSurface3
+004266c8*      _IID_IDirectDrawSurface2
+004266d8*      _IID_IDirectDrawSurface
+004266e8*      _IID_IDirectDraw7
+004266f8*      _IID_IDirectDraw4
+00426708*      _IID_IDirectDraw2
+00426718*      _IID_IDirectDraw
+00426728*      _CLSID_DirectDrawClipper
+00426738*      _CLSID_DirectDraw7
+00426748*      _CLSID_DirectDraw
+Module: .\dx_sdk\dinput.lib(..\dilib2.c)
+00426758       _c_dfDIKeyboard
+Module: C:\WATCOM/lib386/nt\clib3r.lib(memset.c)
+00407250       memset_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(nfree.c)
+00407270       _nfree_
+00407270       free_
+004cbc14       ___MiniHeapFreeRover
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(FSHAND)
+00407378       ___wcpp_4_fs_handler_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(fstconde.cpp)
+00407390       near std::fstream::fstream()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(fstdestr.cpp)
+004074c0       near std::fstream::~fstream()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ioicout.cpp)
+004cbc58       std::ostream near std::cout
+00407614+      near cout_initfini::cout_initfini()
+00407640+      near cout_initfini::~cout_initfini()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostincch.cpp)
+00407690       std::ostream near & near std::ostream::operator <<( char const near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfoprot.cpp)
+0041b9c0       int const near std::filebuf::openprot
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(fsbopen.cpp)
+00407810       void near std::fstreambase::open( char const near *, int, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istread.cpp)
+00407900       std::istream near & near std::istream::read( char near *, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istsgstp.cpp)
+00407ad0       std::istream near & near std::istream::seekg( long )
+Module: C:\WATCOM/lib386/nt\clib3r.lib(memcpy.c)
+00407b90       memcpy_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(fsbclose.cpp)
+00407bb0       void near std::fstreambase::close()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(manendl.cpp)
+00407c90       std::ostream near & near std::endl( std::ostream near & )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostinslo.cpp)
+00407d20       std::ostream near & near std::ostream::operator <<( long )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostinomn.cpp)
+00407f10       std::ostream near & near std::ostream::operator <<( std::ostream near & (near *)())
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostinptr.cpp)
+00407f20       std::ostream near & near std::ostream::operator <<( void near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iofoutfl.cpp)
+004080e0       std::ostream near & near std::ostream::__outfloat( long double const near & )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostinulo.cpp)
+00408530       std::ostream near & near std::ostream::operator <<( long unsigned )
+Module: C:\WATCOM/lib386\math387r.lib(fchop87)
+00408720       __CHP
+Module: C:\WATCOM/lib386/nt\clib3r.lib(nmalloc.c)
+00408740       _nmalloc_
+00408740       malloc_
+00422b10       ___nheapbeg
+00422b14       ___MiniHeapRover
+00422b18       ___LargestSizeB4MiniHeapRover
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ioicin.cpp)
+004cbcd8       std::istream near std::cin
+00408888+      near cin_initfini::cin_initfini()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istexcha.cpp)
+004088f0       std::istream near & near std::istream::operator >>( char near & )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(undefed.cpp)
+00408a70       __wcpp_4_undefed_cdtor__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(undefmbd.cpp)
+004cbd18       ____wcpp_4_data_undefined_member_data_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(dstrt386)
+00408a90       __DLLstart_
+00408a90*      __DLLstartw_
+00408a90*      _DllMainCRTStartup@12
+00408a90*      _wDllMainCRTStartup@12
+Module: C:\WATCOM/lib386/nt\clib3r.lib(fltused.c)
+00422b3c       _fltused_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iofefg.cpp)
+00424458       __ppfltused_
+Module: C:\WATCOM/lib386/nt\emu387.lib(386)
+00408b24       __init_387_emulator
+00408b25*      __fini_387_emulator
+Module: C:\WATCOM/lib386/nt\clib3r.lib(_8087)
+00422b40       __8087
+00422b41       __real87
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(cppdata.cpp)
+004cbd1c       __wint_thread_data_offset
+004cbd20       __compiled_under_NT
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stablcl.cpp)
+00408b30       __wcpp_4_lcl_register__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(memmove.c)
+00408b40       memmove_
+Module: C:\WATCOM/lib386\math387r.lib(fdclass.c)
+00408b93       _FDClass_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(register.c)
+00408c20       __initthread_
+00408c30       _beginthread_
+00408c40       _endthread_
+00408c50*      __RegisterThreadData_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(moddtorr.cpp)
+0042448e       ___wcpp_4_data_module_dtor_ref_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(xmsgwnt.c)
+00408ca0       __exit_with_msg_
+00408d00       __fatal_runtime_error_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mainwnt.c)
+00422b50       ___TlsIndex
+00422b54       ___FirstThreadData
+00422b58       ___GetThreadPtr
+00422b5c       __AccessFileH
+00422b60       __ReleaseFileH
+00422b64       __AccessIOB
+00422b68       __ReleaseIOB
+00422b6c       __AccessNHeap
+00422b70       __AccessFHeap
+00422b74       __ReleaseNHeap
+00408d30*      __threadid_
+00408d50+      __sig_null_rtn_
+00408d60       __NTInit_
+00408f40       __NTFini_
+00408fa0*      __NTMainInit_
+00409000       __exit_
+00422b78       __ReleaseFHeap
+00422b7c       __AccessTDList
+00422b80       __ReleaseTDList
+00422b84       __AccessFList
+00422b88       __ReleaseFList
+00422b8c       __ThreadExitRtn
+00422b90       ___sig_init_rtn
+00422b94       ___sig_fini_rtn
+00422b98       ___process_fini
+004cbd2c       ___Is_DLL
+Module: C:\WATCOM/lib386/nt\clib3r.lib(nmsize.c)
+00409050       _nmsize_
+00409050*      _msize_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(nexpand.c)
+00409060       _nexpand_
+00409060*      _expand_
+004090a0+      __HeapManager_expand_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(__stos)
+00409260       __STOSB
+00409297*      __STOSD
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mem.c)
+00409310       __MemAllocator
+004093c0       __MemFree
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(fsregist.cpp)
+00409500+      char unsigned near * near findHandler( char unsigned near * )
+00409518+      __wcpp_4_dispatch_dummy__
+0040953c       __wcpp_4_fs_lookup__
+00409624       ___wcpp_4_fs_handler_rtn_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(fsbconde.cpp)
+00409700       near std::fstreambase::fstreambase()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iotconde.cpp)
+004097d0       near std::iostream::iostream()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iosconde.cpp)
+004098e0       near std::ios::ios()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iotdestr.cpp)
+004098f0       near std::iostream::~iostream()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(fsbdestr.cpp)
+004099f0       near std::fstreambase::~fstreambase()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iosdestr.cpp)
+00409ad0       near std::ios::~ios()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(opdel.cpp)
+00409b60       void near operator delete( void near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(dtorarst.cpp)
+00409b70       __wcpp_4_dtor_array_store__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(opdelarr.cpp)
+00409ba0       void near operator delete []( void near * )
+Module: C:\WATCOM/lib386/nt\clib3r.lib(iobaddr.c)
+00409bb0       __get_std_stream_
+00409bb0*      __get_std_file_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(sdfconfp.cpp)
+00409bd0       near stdiobuf::stdiobuf( __iobuf near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostconsf.cpp)
+00409be0       near std::ostream::ostream( std::streambuf near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iolglcon.cpp)
+00409c90       near __get_lock::__get_lock( __lock near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iolgldes.cpp)
+00409cb0       near __get_lock::~__get_lock()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostflush.cpp)
+00409cd0       std::ostream near & near std::ostream::flush()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostdestr.cpp)
+00409d80       near std::ostream::~ostream()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(sdfdestr.cpp)
+00409e50       near stdiobuf::~stdiobuf()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostopfx.cpp)
+00409f50       int near std::ostream::do_opfx()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iouwrtit.cpp)
+0040a010       int near __WATCOM_ios::writeitem( std::ostream near &, char const near *, int, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iossetst.cpp)
+0040a710+      near std::ios::failure::failure( std::ios::failure const near & )
+0040a720+      near std::ios::failure::~failure()
+0040a730+      near __WATCOM_exception::__WATCOM_exception( __WATCOM_exception const near & )
+0040a740+      near __WATCOM_exception::~__WATCOM_exception()
+0040a670       void near std::ios::setstate( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfopen.cpp)
+0040a750       std::filebuf near * near std::filebuf::open( char const near *, int, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iosclear.cpp)
+0040a870       int near std::ios::clear( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfdsgtn.cpp)
+0040a8f0       int near std::streambuf::do_sgetn( char near *, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(vfun_err.cpp)
+0040a9f0       __wcpp_4_undef_vfun__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istdipfx.cpp)
+0040aa20       int near std::istream::do_ipfx( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istdread.cpp)
+0040ab40       std::istream near & near std::istream::do_read( char near *, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfseeko.cpp)
+0040acb0       long near std::streambuf::seekoff( long, int, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istipfx.cpp)
+0040acc0       int near std::istream::ipfx( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfclose.cpp)
+0040ad70       std::filebuf near * near std::filebuf::close()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostput.cpp)
+0040ae20       std::ostream near & near std::ostream::put( char )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ioufgtba.cpp)
+0040afe0       int near __FlagsToBase( long )
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ltoa.c)
+0040b010       ultoa_
+0040b060       ltoa_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(strupr.c)
+0040b090       strupr_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iofnoefg.cpp)
+00422be8       void (near * near __EFG_cnvs2d)( char near *, double near * )
+00422bec       int (near * near __EFG_cnvd2f)( double near *, float near * )
+00422bf0       void (near * near __EFG_LDcvt)( __6ks9tmlong_double near *, cvt_info near *, char near * )
+00422bf4       char near * (near * near __EFG_fcvt)( double, int, int near *, int near * )
+00422bf8       void (near * near __EFG__FDLD)( double near *, __6ks9tmlong_double near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(opnewarr.cpp)
+0040b0d0       void near * near operator new []( int unsigned )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostadpre.cpp)
+0040b0e0       void near __AddPrefix( char, char near *, int near &, int, long )
+Module: C:\WATCOM/lib386/nt\clib3r.lib(nmemneed.c)
+0040b140       __nmemneed_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(grownear.c)
+0040b2b0       __ExpandDGROUP_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istconsf.cpp)
+0040b2d0       near std::istream::istream( std::streambuf near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istdestr.cpp)
+0040b3a0       near std::istream::~istream()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(pure_err.cpp)
+0040b470       __wcpp_4_pure_error__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istdrshf.cpp)
+0040b4a0       std::istream near & near std::istream::do_rshift( char near & )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(fatalerr.cpp)
+0040b590       __wcpp_4_fatal_runtime_error__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(dmainwnt.c)
+0040b5d0       __LibMain@12
+Module: C:\WATCOM/lib386/nt\clib3r.lib(segdefns)
+00401003       ___begtext
+0041b000*      __nullarea
+00424434       __Start_XI
+00424488       __End_XI
+00424488       __Start_YI
+004244b8       __End_YI
+Module: C:\WATCOM/lib386/nt\clib3r.lib(setefg.c)
+0040b780       __setEFGfmt_
+Module: C:\WATCOM/lib386\math387r.lib(cnvs2d.c)
+0040b795       __cnvs2d_
+Module: C:\WATCOM/lib386\math387r.lib(cnvd2f.c)
+0040b7a3       __cnvd2f_
+Module: C:\WATCOM/lib386\math387r.lib(ldcvt.c)
+0040b8f5       _LDScale10x_
+0040be9c       __LDcvt_
+Module: C:\WATCOM/lib386\math387r.lib(_i_fcvt_.asm)
+0040c2ec       _fcvt_
+Module: C:\WATCOM/lib386\math387r.lib(cnvd2ld.c)
+0040c2f1       __cnvd2ld_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(chk8087.c)
+0040c320*      _fpreset_
+0040c360       __chk8087_
+0040c370*      __init_8087_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(crwdata)
+00422ce8       __osmajor
+00422ce9       __osminor
+00422cea       __osbuild
+00422cec       __osver
+00422cf0       __winmajor
+00422cf4       __winminor
+00422cf8       __winver
+00422cb4       __LpDllName
+00422cb8       __LpwCmdLine
+00422cbc       __LpwPgmName
+00422cc0       __LpwDllName
+00422cac       __LpCmdLine
+00422cb0       __LpPgmName
+00422ca4*      __dynend
+00422ca8       __curbrk
+00422cc4*      __STACKLOW
+00422cc8       __STACKTOP
+00422ccc*      __ASTACKSIZ
+00422cd0*      __ASTACKPTR
+00422cd4       __cbyte
+00422cd8*      __cbyte2
+00422cdc*      __child
+00422ce2       __Envptr
+00422ce6*      __Envseg
+00422ce0       __no87
+00422cfc       ___FPE_handler
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(thrddata.cpp)
+0040c390       __wcpp_4_multi_thread_init__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stabmod.cpp)
+0040c3a0       __wcpp_4_module_dtor__
+0040c3dc       __wcpp_4_mod_register__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(thredwnt.c)
+0040c4c0       __CBeginThread_
+0040c560       __CEndThread_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(enterdb.c)
+0040c5a0       __EnterWVIDEO_
+00422d00+      ___WD_Present
+Module: C:\WATCOM/lib386/nt\clib3r.lib(hdlman.c)
+00422d04+      ___NHandles
+00422d08+      ___OSHandles
+00422d0c+      ___FakeHandles
+0040c5d0+      __growPOSIXHandles_
+0040c670       __allocPOSIXHandle_
+0040c730       __freePOSIXHandle_
+0040c750       __getOSHandle_
+0040c760       __setOSHandle_
+0040c7b0+      __NTGetFakeHandle_
+0040c820       __initPOSIXHandles_
+0040c900*      __set_handles_
+0040c910*      _grow_handles_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(environ.c)
+004cc34c       ___env_mask
+004cc350       _environ
+004cc354       __wenviron
+Module: C:\WATCOM/lib386/nt\clib3r.lib(getmodfn.c)
+0040c950       __lib_GetModuleFileNameW_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(strdup.c)
+0040c9f0       __clib_strdup_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(istable.c)
+0040ca30       __IsTable
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ustrdup.c)
+0040cb31       __clib_wcsdup_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(excptwnt.c)
+0040d1c0+      ___ReportException@4
+0040d610       __DefaultExceptionHandler_
+0040d650+      ___ExceptionFilter
+0040d860       __NewExceptionFilter_
+0040d890       __DoneExceptionFilter_
+00422d18       ___oscode_check_func
+00422d1c       ___raise_func
+004cc358*      _sw
+004cc35c+      ___ExceptionHandled
+004cc35d+      ___ReportInvoked
+Module: C:\WATCOM/lib386/nt\clib3r.lib(stklmwnt.c)
+0040d8d0       __init_stack_limits_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(initrtns.c)
+0040d950       __InitRtns
+0040d9a0       __FiniRtns
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stabdtor.cpp)
+0040dca0       __wcpp_4_destruct_internal__
+0040dcc0       __wcpp_4_destruct_all__
+0040dcc4*      __wcpp_4_destruct__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stabdisp.cpp)
+0040deec       __wcpp_4_dispatchable__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfconde.cpp)
+0040df40       near std::filebuf::filebuf()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iosinit.cpp)
+0040df60       void near std::ios::init( std::streambuf near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfdestr.cpp)
+0040dfc0       near std::filebuf::~filebuf()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istconde.cpp)
+0040e0b0       near std::istream::istream()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ostconde.cpp)
+0040e160       near std::ostream::ostream()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(ioufrxal.cpp)
+0040e1a0       void near __WATCOM_ios::free_xalloc_storage( std::ios near * )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stabadt.cpp)
+0040e1c0+      void near * near dtor_the_array( _RTARCTOR near * )
+0040e204       near _RTARCTOR::~_RTARCTOR()
+0040e21c       __wcpp_4_dtor_array__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(iob.c)
+00422d5c       ___iob
+00422f64       __fmode
+004cc360       ___OpenStreams
+004cc364       ___ClosedStreams
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfdspun.cpp)
+0040e290       int near std::streambuf::do_sputn( char const near *, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfpbfai.cpp)
+0040e3d0       int near std::streambuf::pbackfail( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(sdfoverf.cpp)
+0040e3e0       int near stdiobuf::overflow( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(sdfundrf.cpp)
+0040e700       int near stdiobuf::underflow()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfsbuf.cpp)
+0040ea10       std::streambuf near * near std::streambuf::setbuf( char near *, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfseekp.cpp)
+0040eaf0       long near std::streambuf::seekpos( long, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(sdfsync.cpp)
+0040eb00       int near stdiobuf::sync()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfdoall.cpp)
+0040ebf0       int near std::streambuf::doallocate()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfconde.cpp)
+0040eca0       near std::streambuf::streambuf()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(lock.cpp)
+0040ed00       near __lock::__lock()
+0040ed18       near __lock::~__lock()
+0040ed44       void near __lock::p()
+0040ed4c       void near __lock::v()
+0040ed54*      near __fn_lock::__fn_lock( __lock near * )
+0040ed64*      near __fn_lock::~__fn_lock()
+004244a6*      rt_init __based("YI") __wcpp_4_data_fini_sisema_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfsync.cpp)
+0040ed90       int near std::streambuf::sync()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfdestr.cpp)
+0040ede0       near std::streambuf::~streambuf()
+Module: C:\WATCOM/lib386/nt\clib3r.lib(flush.c)
+0040ee00       __flush_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iosfail.cpp)
+0040ef00       near std::ios::failure::failure( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stabthrw.cpp)
+0040f6f0+      near std::exception::exception()
+0040f740+      near std::exception::exception( std::exception const near & )
+0040f790+      near std::exception::exception( char const near * )
+0040f7e0+      near std::exception::~exception()
+0040f870+      char const near * near std::exception::what() const
+0040f8b0+      near std::bad_exception::bad_exception()
+0040f910+      near std::bad_exception::bad_exception( std::bad_exception const near & )
+0040f960+      near std::bad_exception::~bad_exception()
+0040f5b0*      __wcpp_4_rethrow__
+0040f5f4*      __wcpp_4_catch_done__
+0040f65c       __wcpp_4_throw__
+0040f6a4*      __wcpp_4_throw_zero__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(plusopen.c)
+0040fa40       __plusplus_open_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(prwdata.cpp)
+004cc370       __wint_static_init_sema
+004cc380       __wint_pure_error_flag
+004cc382       __wint_undef_vfun_flag
+004cc384       __wint_module_init
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(manws.cpp)
+0040fb10       std::istream near & near std::ws( std::istream near & )
+Module: C:\WATCOM/lib386/nt\clib3r.lib(close.c)
+0040fbb0       close_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(alphabet.c)
+0041b588       ___Alphabet
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(opnew.cpp)
+0040fbd0       void near * near operator new( int unsigned )
+Module: C:\WATCOM/lib386/nt\clib3r.lib(amblksiz.c)
+00422fe4       __amblksiz
+Module: C:\WATCOM/lib386/nt\clib3r.lib(heapen.c)
+0040fc30*      _heapenable_
+00422fe8       ___heap_enabled
+Module: C:\WATCOM/lib386/nt\clib3r.lib(nheapmin.c)
+0040fc60       _nheapshrink_
+0040fc60*      _nheapmin_
+0040fc60*      _heapmin_
+0040fc60       _heapshrink_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(exit.c)
+0040fd42+      __null_int23_exit_
+0040fd43       exit_
+0040fd93*      _exit_
+00422fec+      ___int23_exit
+00422ff0+      ___FPE_handler_exit
+Module: C:\WATCOM/lib386/nt\clib3r.lib(lmainwnt.c)
+0040fdb0       _LibMain@12
+Module: C:\WATCOM/lib386/nt\clib3r.lib(rdllmwnt.c)
+00422ff4       __pRawDllMain
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mthread.c)
+0040ff60+      __CloseSemaphore_
+0040ffa0+      __AccessIOB_
+0040ffb0+      __ReleaseIOB_
+0040ffc0+      __AccessFileH_
+0040ffd0+      __ReleaseFileH_
+0040ffe0+      __AccessNHeap_
+0040fff0+      __ReleaseNHeap_
+00410000+      __AccessFHeap_
+00410010+      __ReleaseFHeap_
+00410020+      __AccessTDList_
+00410030+      __ReleaseTDList_
+00410040+      __AccessFList_
+00410050+      __AccessSemaphore_
+004100b0+      __ReleaseFList_
+004100c0+      __ReleaseSemaphore_
+004100f0+      __MultipleThread_
+00410140       __AllocInitThreadData_
+00410190       __FreeInitThreadData_
+004101a0       __NTThreadInit_
+00410210       __NTAddThread_
+00410260       __NTRemoveThread_
+004102f0       __InitMultipleThread_
+00422ff8       ___AccessSema4
+00422ffc       ___ReleaseSema4
+00423000       ___CloseSema4
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ddgrpwnt.c)
+004105a0       __disallow_single_dgroup_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(cinit.c)
+00410670       __CommonInit_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(dosseg)
+00001234       __DOSseg__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(noefgfmt.c)
+00423004       ___EFG_printf
+00423008       ___EFG_scanf
+Module: C:\WATCOM/lib386\math387r.lib(efgfmt.c)
+004106c2       _EFG_Format_
+Module: C:\WATCOM/lib386\math387r.lib(strtod.c)
+00410d40+      __Strtold_
+00410ea7       strtod_
+Module: C:\WATCOM/lib386\math387r.lib(ldclass.c)
+00410feb       __LDClass_
+0041103b*      _FLClass_
+Module: C:\WATCOM/lib386\math387r.lib(efcvt.c)
+0041107b*      ecvt_
+004110b2       fcvt_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(8087cw.c)
+0042300c       __8087cw
+Module: C:\WATCOM/lib386/nt\clib3r.lib(save8087.c)
+00423010       ___Save8087
+00423014       ___Rest8087
+Module: C:\WATCOM/lib386/nt\clib3r.lib(init8087)
+004110f4       __x87id
+Module: C:\WATCOM/lib386/nt\clib3r.lib(regdata.c)
+00411130       __RegisterThreadDataSize_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mthrdini.c)
+00411160       __InitThreadData_
+00423018       ___ThreadDataSize
+Module: C:\WATCOM/lib386/nt\clib3r.lib(seterrno.c)
+0041118b       __set_errno_
+00411199*      __set_EDOM_
+004111a7       __set_ERANGE_
+004111b5*      __set_EINVAL_
+004111c8       __set_doserrno_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(iomode.c)
+004111e0       __GetIOMode_
+00411200       __SetIOMode_nogrow_
+0042301c       ___NFiles
+00423020       ___init_mode
+00423070       ___io_mode
+Module: C:\WATCOM/lib386/nt\clib3r.lib(stiomode.c)
+00411220       __grow_iomode_
+004112f0+      __shrink_iomode_
+00411330       __SetIOMode_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(setenvp.c)
+004113a0       __setenvp_
+00411460       __freeenvp_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ustrlen.c)
+004114ad       wcslen_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(conutwnt.c)
+004114d0       __NTRealKey_
+00411580       __NTConsoleInput_
+00411590       __NTConsoleOutput_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(fclex387.c)
+004115a0       _ClearFPE_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(signlwnt.c)
+0042307c+      __SignalTable
+004115b0+      __SetSignalFunc_
+00411600+      __GetSignalFunc_
+00411630+      __GetSignalOSCode_
+00411660+      __CheckSignalExCode_
+004117a0+      __sigabort_
+004117b0       __sigfpe_handler_
+00411800*      signal_
+00411890+      raise_
+00411900+      __SigInit_
+00411950+      __SigFini_
+00411990+      __sig_init_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stabtrav.cpp)
+004119b0       __wcpp_4_stab_entry__
+004119c8*      __wcpp_4_stab_trav_comp__
+00411aac       __wcpp_4_stab_trav_init__
+00411ad0       __wcpp_4_stab_trav_next__
+00411b28       __wcpp_4_stab_trav_move__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(callterm.cpp)
+00411b40       __wcpp_4_corrupted_stack__
+00411b54       __wcpp_4_call_terminate__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(allocexc.cpp)
+00411ba4       __wcpp_4_alloc_exc__
+00411e0c       __wcpp_4_free_exc__
+00411e54       __wcpp_4_find_active__
+00411e70       __wcpp_4_dtor_free_exc__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(pgmthrd.cpp)
+00411f40       __wcpp_4_pgm_thread__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(tsequiv.cpp)
+00411f70       __wcpp_4_ts_refed__
+00411f88+      __wcpp_4_ts_pnted__
+00411fbc       __wcpp_4_ts_equiv__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfpbfai.cpp)
+004120b0       int near std::filebuf::pbackfail( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfoverf.cpp)
+004122c0       int near std::filebuf::overflow( int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfundrf.cpp)
+00412660       int near std::filebuf::underflow()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfsetbf.cpp)
+00412980       std::streambuf near * near std::filebuf::setbuf( char near *, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfseeko.cpp)
+00412a60       long near std::filebuf::seekoff( long, int, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(flfsync.cpp)
+00412b70       int near std::filebuf::sync()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(iosgnilk.cpp)
+00412ce0       __lock near * near __get_next_ios_lock()
+Module: C:\WATCOM/lib386/nt\clib3r.lib(liballoc.c)
+00412d80       _plib_malloc_
+00412d90       _plib_free_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(initfile.c)
+00412dd0       __InitFiles_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ioexit.c)
+00412ed0*      fcloseall_
+00412ee0       __full_io_exit_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(fwrite.c)
+00412ef0       fwrite_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(fgetc.c)
+00413100+      __fill_buffer_
+00413200       fgetc_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfsetb.cpp)
+004132c0       void near std::streambuf::setb( char near *, char near *, int )
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stfgnslk.cpp)
+00413380       __lock near * near __get_next_streambuf_lock()
+Module: C:\WATCOM/lib386/nt\clib3r.lib(__lseek.c)
+004133e0       __lseek_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(fsync.c)
+00413420       fsync_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(qwrit.c)
+00413470       __qwrite_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(exc_pr.cpp)
+00413550       near _EXC_PR::_EXC_PR( _RTCTL near *, RW_DTREG near *, EXCSTATE )
+0041357c       near _EXC_PR::~_EXC_PR()
+0041358c       near _EXC_PR_FREE::_EXC_PR_FREE( _RTCTL near *, RW_DTREG near *, EXCSTATE, ACTIVE_EXC near * )
+004135a0       near _EXC_PR_FREE::~_EXC_PR_FREE()
+004135d8       near _EXC_PR_DTOR::_EXC_PR_DTOR( _RTCTL near *, RW_DTREG near *, EXCSTATE, ACTIVE_EXC near * )
+004135e8       near _EXC_PR_FNEXC::_EXC_PR_FNEXC( _RTCTL near *, RW_DTREG near *, RW_DTREG near *, ACTIVE_EXC near * )
+00413608       near _EXC_PR_FNEXC::~_EXC_PR_FNEXC()
+00413610       near _EXC_PR_DTOR::~_EXC_PR_DTOR()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(unexpect.cpp)
+00413640       void near std::unexpected()
+Module: C:\WATCOM/lib386/nt\clib3r.lib(setjmp)
+004136d8*      _setjmp_
+00413711       longjmp_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stabinit.cpp)
+004137a0       __wcpp_4_exc_setup__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(stackwnt.c)
+00413840       stackavail_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(statwnt.c)
+00413959       stat_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(openwnt.c)
+00413d90*      open_
+00413db0       sopen_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istpeek.cpp)
+00413de0       int near std::istream::peek()
+Module: C:\WATCOM/lib386/nt\clib3r.lib(isspace.c)
+00413ed0       isspace_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(istget.cpp)
+00413ee0       int near std::istream::get()
+Module: C:\WATCOM/lib386/nt\clib3r.lib(_clsewnt.c)
+00413ff0       __close_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(calloc.c)
+00414050       calloc_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(trdlist.c)
+004140c0       __GetThreadData_
+00414110       __ReallocThreadData_
+00414200       __AddThreadData_
+00414280       __RemoveThreadData_
+004142e0       __ResizeThreadDataList_
+00414310       __FreeThreadDataList_
+00414340*      __ActiveThreads_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(trdalloc.c)
+00414360       __FiniThreadProcessing_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(rtcntrl.c)
+00414370*      _SetLD64bit_
+00414380*      _SetLD80bit_
+00414390       _LDisDouble_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(tolower.c)
+004143a0       tolower_
+Module: C:\WATCOM/lib386\math387r.lib(bufld386)
+004143b0       __ZBuf2LD
+Module: C:\WATCOM/lib386\math387r.lib(inf_nan.c)
+00414453*      ___f_infinity
+00414457*      ___f_posqnan
+0041445b       ___d_infinity
+00414463       ___d_posqnan
+0041446b*      ___ld_infinity
+00414473*      ___ld_posqnan
+Module: C:\WATCOM/lib386/nt\clib3r.lib(hugeval.c)
+00414480       __HugeValue
+Module: C:\WATCOM/lib386/nt\clib3r.lib(cvtbuf.c)
+00414490       __CVTBuffer_
+Module: C:\WATCOM/lib386\math387r.lib(cvt.c)
+0041449c       __cvt_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(iomodtty.c)
+00414520       __ChkTTYIOMode_
+00414560*      __IOMode_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(dofilstr.c)
+004145a0       __ParsePosixHandleStr_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(clearenv.c)
+004146c0       clearenv_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(abort.c)
+00414765*      abort_
+00414777       __terminate_
+00423118       ___abort
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(bittest.cpp)
+00414790       __wcpp_4_bit_test__
+004147b0       __wcpp_4_bit_off__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(termnate.cpp)
+004147d0       void near std::terminate()
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(areaexc.cpp)
+00423130       ___EXC_AREA
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(tssize.cpp)
+00414834       __wcpp_4_ts_size__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(_strcmp)
+00414870       strcmp_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(lseek.c)
+004149b0       lseek_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(write.c)
+00414c50       write_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(tell.c)
+00414eb0       tell_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(read.c)
+00414ed0       read_
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(sisema.cpp)
+00415060       __wcpp_4_static_init__
+Module: C:\WATCOM/lib386/nt\plbxmt3r.lib(stabact.cpp)
+004150a0       __wcpp_4_ctor_array__
+Module: C:\WATCOM/lib386/nt\clib3r.lib(fclose.c)
+00415140+      __doclose_
+004151e0       __shutdown_stream_
+00415200*      fclose_
+004cd11c+      ___RmTmpFileFn
+Module: C:\WATCOM/lib386/nt\clib3r.lib(freefp.c)
+00415250       __freefp_
+004152a0       __purgefp_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ioalloc.c)
+004152d0       __ioalloc_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(fputc.c)
+00415370       fputc_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(flushall.c)
+00415450       __flushall_
+00415490*      flushall_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(gtchewnt.c)
+004154a0       getche_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(qread.c)
+004154d0       __qread_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(dosret.c)
+00415540*      _dosretax_
+00415550*      _dosret0_
+00415560       __set_errno_dos_
+00415590*      __set_errno_dos_reterr_
+004155a0       __set_errno_nt_
+004155b0*      __set_errno_nt_reterr_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ljmphdl.c)
+00424234       ___longjmp_handler
+Module: C:\WATCOM/lib386/nt\clib3r.lib(stricmp.c)
+004155e0       stricmp_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbspbrk.c)
+00415620       _mbspbrk_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(gtcwdwnt.c)
+00415670       getcwd_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(fullpath.c)
+00415710+      _sys_fullpath_
+00415790       _fullpath_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbsinc.c)
+00415800       _mbsinc_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ntdirinf.c)
+00415830       __MakeDOSDT_
+00415860*      __FromDOSDT_
+00415890*      __GetNTDirInfo_
+004158d0*      __NTFindNextFileWithAttr_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(d2ttime.c)
+00415930       _d2ttime_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ntfio.c)
+004159b0*      __GetNTCreateAttr_
+004159f0       __GetNTAccessAttr_
+00415a20       __GetNTShareAttr_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(umaskval.c)
+00424238       ___umaskval
+Module: C:\WATCOM/lib386/nt\clib3r.lib(isattwnt.c)
+00415a80       isatty_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(getenv.c)
+00415aa0       getenv_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(strncpy.c)
+00415b30       strncpy_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(strtol.c)
+00415d90*      strtoul_
+00415da0       strtol_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(putenv.c)
+00415db0       putenv_
+00416040       __putenv_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(chktty.c)
+004161b0       __chktty_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(getchwnt.c)
+004162f0       getch_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(putchwnt.c)
+00416360       putch_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbterm.c)
+004163b0       _mbterm_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbsnextc.c)
+004163f0       _mbsnextc_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbschr.c)
+00416430       _mbschr_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbisdbcs.c)
+004cd12c       ___IsDBCS
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbislead.c)
+00416490*      _ismbblead_
+004cd130       ___MBCSIsTable
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mktime.c)
+004164b0       mktime_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbcupper.c)
+00416540       _mbctoupper_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbslen.c)
+00416570       _mbslen_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbstowcs.c)
+004165a0       mbstowcs_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(uputenv.c)
+00416620*      _wputenv_
+00416840       __wputenv_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(toupper.c)
+00416940       toupper_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbconv.c)
+00416950       _mbvtop_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbclen.c)
+00416970       _mbclen_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbccmp.c)
+004169a0       _mbccmp_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbinit.c)
+00416a15       __mbinit_
+004242cc       ___MBCodePage
+Module: C:\WATCOM/lib386/nt\clib3r.lib(locmktim.c)
+00416b10       __local_mktime_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(gmtime.c)
+00416c90       __brktime_
+00416d90+      _gmtime_
+00416db0*      gmtime_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(tzset.c)
+004242d0       ___start_dst
+004242f4       ___end_dst
+0042441c*      _tzname
+00424424       _timezone
+00424428       _daylight
+0042442c       ___dst_adjust
+00416e20*      __DontCacheOSTZ_
+00416e30*      __CacheOSTZ_
+00417310+      __parse_tz_
+00417700       tzset_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(timeutil.c)
+00417870       __isindst_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(mbtowc.c)
+00417ba0       mbtowc_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(ustrchr.c)
+00417c30       wcschr_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(setenvar.c)
+00417c50       __lib_SetEnvironmentVariableW_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(crtwenv.c)
+00417d40       __create_wide_environment_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(wcstombs.c)
+00417db0       wcstombs_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(utoupper.c)
+00417e4f       towupper_
+Module: C:\WATCOM/lib386/nt\clib3r.lib(leapyear.c)
+00417e60       __leapyear_
+0041b664       ___diyr
+0041b67e       ___dilyr
+Module: C:\WATCOM/lib386/nt\clib3r.lib(wctomb.c)
+00417ea0       wctomb_
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+_DirectInputCreateA@16              DINPUT.dll
+_DirectDrawCreate@12                DDRAW.dll
+_GetLastError@0                     KERNEL32.DLL
+_FormatMessageA@28                  KERNEL32.DLL
+_MessageBoxA@16                     USER32.DLL
+_LocalFree@4                        KERNEL32.DLL
+_GetModuleHandleA@4                 KERNEL32.DLL
+_timeGetTime@0                      WINMM.DLL
+_PostMessageA@16                    USER32.DLL
+_KillTimer@8                        USER32.DLL
+_PostQuitMessage@4                  USER32.DLL
+_DefWindowProcA@16                  USER32.DLL
+_SetTimer@16                        USER32.DLL
+_LoadIconA@8                        USER32.DLL
+_LoadCursorA@8                      USER32.DLL
+_CreateSolidBrush@4                 GDI32.DLL
+_RegisterClassA@4                   USER32.DLL
+_CreateWindowExA@48                 USER32.DLL
+_GetWindowLongA@8                   USER32.DLL
+_SetWindowLongA@12                  USER32.DLL
+_ShowWindow@8                       USER32.DLL
+_UpdateWindow@4                     USER32.DLL
+_PeekMessageA@20                    USER32.DLL
+_TranslateMessage@4                 USER32.DLL
+_DispatchMessageA@4                 USER32.DLL
+_UnregisterClassA@8                 USER32.DLL
+_MessageBeep@4                      USER32.DLL
+_FindResourceA@12                   KERNEL32.DLL
+_LoadResource@8                     KERNEL32.DLL
+_GetStdHandle@4                     KERNEL32.DLL
+_WriteFile@20                       KERNEL32.DLL
+_GetEnvironmentStringsA@0           KERNEL32.DLL
+_GetVersion@0                       KERNEL32.DLL
+_GetModuleFileNameA@12              KERNEL32.DLL
+_GetCommandLineA@0                  KERNEL32.DLL
+_GetCommandLineW@0                  KERNEL32.DLL
+_FreeEnvironmentStringsA@4          KERNEL32.DLL
+_ExitProcess@4                      KERNEL32.DLL
+_VirtualAlloc@16                    KERNEL32.DLL
+_CloseHandle@4                      KERNEL32.DLL
+_CreateThread@24                    KERNEL32.DLL
+_ResumeThread@4                     KERNEL32.DLL
+_ExitThread@4                       KERNEL32.DLL
+_SetStdHandle@8                     KERNEL32.DLL
+_CreateEventA@16                    KERNEL32.DLL
+_GetModuleFileNameW@12              KERNEL32.DLL
+_MultiByteToWideChar@24             KERNEL32.DLL
+_LoadLibraryA@4                     KERNEL32.DLL
+_GetProcAddress@8                   KERNEL32.DLL
+_SetUnhandledExceptionFilter@4      KERNEL32.DLL
+_UnhandledExceptionFilter@4         KERNEL32.DLL
+_VirtualQuery@12                    KERNEL32.DLL
+_RtlUnwind@16                       KERNEL32.DLL
+_RaiseException@16                  KERNEL32.DLL
+_VirtualFree@12                     KERNEL32.DLL
+_InitializeCriticalSection@4        KERNEL32.DLL
+_DeleteCriticalSection@4            KERNEL32.DLL
+_LeaveCriticalSection@4             KERNEL32.DLL
+_GetCurrentThreadId@0               KERNEL32.DLL
+_EnterCriticalSection@4             KERNEL32.DLL
+_TlsGetValue@4                      KERNEL32.DLL
+_SetLastError@4                     KERNEL32.DLL
+_TlsAlloc@0                         KERNEL32.DLL
+_TlsFree@4                          KERNEL32.DLL
+_TlsSetValue@8                      KERNEL32.DLL
+_CreateFileA@28                     KERNEL32.DLL
+_SetConsoleCtrlHandler@8            KERNEL32.DLL
+_SetFilePointer@16                  KERNEL32.DLL
+_FlushFileBuffers@4                 KERNEL32.DLL
+_GetFileType@4                      KERNEL32.DLL
+_GetDriveTypeA@4                    KERNEL32.DLL
+_FindFirstFileA@8                   KERNEL32.DLL
+_FindClose@4                        KERNEL32.DLL
+_ReadFile@20                        KERNEL32.DLL
+_GetCurrentDirectoryA@8             KERNEL32.DLL
+_GetFullPathNameA@16                KERNEL32.DLL
+_FileTimeToLocalFileTime@8          KERNEL32.DLL
+_FileTimeToDosDateTime@12           KERNEL32.DLL
+_DosDateTimeToFileTime@12           KERNEL32.DLL
+_LocalFileTimeToFileTime@8          KERNEL32.DLL
+_FindNextFileA@8                    KERNEL32.DLL
+_SetEnvironmentVariableA@8          KERNEL32.DLL
+_ReadConsoleInputA@16               KERNEL32.DLL
+_GetConsoleMode@8                   KERNEL32.DLL
+_SetConsoleMode@8                   KERNEL32.DLL
+_WriteConsoleA@20                   KERNEL32.DLL
+_CharUpperA@4                       USER32.DLL
+_GetACP@0                           KERNEL32.DLL
+_GetOEMCP@0                         KERNEL32.DLL
+_GetCPInfo@8                        KERNEL32.DLL
+_GetTimeZoneInformation@4           KERNEL32.DLL
+_SetEnvironmentVariableW@8          KERNEL32.DLL
+_WideCharToMultiByte@32             KERNEL32.DLL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\WATCOM/lib386/nt\kernel32.lib
+C:\WATCOM/lib386/nt\user32.lib
+C:\WATCOM/lib386/nt\gdi32.lib
+.\dx_sdk\ddraw.lib
+.\dx_sdk\dinput.lib
+.\dx_sdk\dxguid.lib
+C:\WATCOM/lib386/nt\winmm.lib
+C:\WATCOM/lib386/nt\clib3r.lib
+C:\WATCOM/lib386/nt\plbxmt3r.lib
+C:\WATCOM/lib386\math387r.lib
+C:\WATCOM/lib386/nt\emu387.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  000cadb7 (830903.)
+Entry point address: 00408a90
+Link time: 00:00.71

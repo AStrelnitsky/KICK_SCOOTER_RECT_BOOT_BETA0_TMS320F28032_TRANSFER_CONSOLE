@@ -1,0 +1,61 @@
+FWork.cpp(12): Warning! W885: col(2) #endif matches #if in different source file
+FWork.cpp(12): Note! N886: col(2) preprocessing directive found in: WatHack.h(1) (col 9)
+FWork.cpp(69): Warning! W836: col(21) symbol has different type than previous symbol in same declaration
+FWork.cpp(69): Note! N837: col(21) companion definition is 'ColOrder'
+FWork.cpp(69): Note! N392: col(5) definition: 'int ColOrder[1024]'
+FWork.cpp(70): Warning! W836: col(23) symbol has different type than previous symbol in same declaration
+FWork.cpp(70): Note! N837: col(23) companion definition is 'LineOffset'
+FWork.cpp(70): Note! N392: col(5) definition: 'int LineOffset[8192]'
+FWork.cpp(129): Warning! W836: col(30) symbol has different type than previous symbol in same declaration
+FWork.cpp(129): Note! N837: col(30) companion definition is 'Buffer'
+FWork.cpp(129): Note! N392: col(14) definition: 'char Buffer[16384]' in 'double * ProcessINILine( char * )'
+FWork.cpp(129): Warning! W836: col(34) symbol has different type than previous symbol in same declaration
+FWork.cpp(129): Note! N837: col(34) companion definition is 'Buffer'
+FWork.cpp(129): Note! N392: col(14) definition: 'char Buffer[16384]' in 'double * ProcessINILine( char * )'
+FWork.cpp(129): Warning! W836: col(39) symbol has different type than previous symbol in same declaration
+FWork.cpp(129): Note! N837: col(39) companion definition is 'Buffer'
+FWork.cpp(129): Note! N392: col(14) definition: 'char Buffer[16384]' in 'double * ProcessINILine( char * )'
+FWork.cpp(129): Warning! W836: col(46) symbol has different type than previous symbol in same declaration
+FWork.cpp(129): Note! N837: col(46) companion definition is 'Buffer'
+FWork.cpp(129): Note! N392: col(14) definition: 'char Buffer[16384]' in 'double * ProcessINILine( char * )'
+FWork.cpp(220): Warning! W726: col(1) no reference to formal parameter 'arglist'
+FWork.cpp(216): Note! N392: col(37) definition: 'void * arglist' in 'void ProgressBarThread( void * )'
+FWork.cpp(237): Warning! W013: col(17) unreachable code
+FWork.cpp(245): Warning! W013: col(17) unreachable code
+FWork.cpp(317): Warning! W893: col(16) switch statement has no case labels
+FWork.cpp(330): Warning! W013: col(9) unreachable code
+FWork.cpp(475): Warning! W726: col(1) no reference to formal parameter 'arglist'
+FWork.cpp(420): Note! N392: col(32) definition: 'void * arglist' in 'void ServerThread( void * )'
+FWork.cpp(762): Warning! W726: col(1) no reference to formal parameter 'Command'
+FWork.cpp(722): Note! N392: col(34) definition: 'unsigned short Command' in 'int FWProtocolRd( unsigned short )'
+FWork.cpp(766): Warning! W836: col(37) symbol has different type than previous symbol in same declaration
+FWork.cpp(766): Note! N837: col(37) companion definition is 'Buff'
+FWork.cpp(766): Note! N392: col(23) definition: 'unsigned char Buff[65536]' in 'int stdcall NetworkWrapper( int, int, void * * )'
+FWork.cpp(1129): Warning! W389: col(47) integral value may be truncated during assignment or initialization
+FWork.cpp(1168): Warning! W836: col(25) symbol has different type than previous symbol in same declaration
+FWork.cpp(1168): Note! N837: col(25) companion definition is 'Temp'
+FWork.cpp(1168): Note! N392: col(14) definition: 'char Temp[256]' in 'int stdcall WinAPIWrapper( int, int, void * * )'
+FWork.cpp(1284): Warning! W128: col(27) initializer for variable 'toolInfo' cannot be bypassed
+FWork.cpp(1273): Note! N392: col(34) definition: 'tagTOOLINFOA toolInfo' in 'int stdcall WinAPIWrapper( int, int, void * * )'
+FWork.cpp(1288): Warning! W128: col(42) initializer for variable 'toolInfo' cannot be bypassed
+FWork.cpp(1273): Note! N392: col(34) definition: 'tagTOOLINFOA toolInfo' in 'int stdcall WinAPIWrapper( int, int, void * * )'
+FWork.cpp(1295): Warning! W128: col(40) initializer for variable 'toolInfo' cannot be bypassed
+FWork.cpp(1273): Note! N392: col(34) definition: 'tagTOOLINFOA toolInfo' in 'int stdcall WinAPIWrapper( int, int, void * * )'
+FWork.cpp(1302): Warning! W128: col(30) initializer for variable 'toolInfo' cannot be bypassed
+FWork.cpp(1273): Note! N392: col(34) definition: 'tagTOOLINFOA toolInfo' in 'int stdcall WinAPIWrapper( int, int, void * * )'
+FWork.cpp(1304): Warning! W128: col(36) initializer for variable 'toolInfo' cannot be bypassed
+FWork.cpp(1273): Note! N392: col(34) definition: 'tagTOOLINFOA toolInfo' in 'int stdcall WinAPIWrapper( int, int, void * * )'
+FWork.cpp(1308): Warning! W128: col(36) initializer for variable 'toolInfo' cannot be bypassed
+FWork.cpp(1273): Note! N392: col(34) definition: 'tagTOOLINFOA toolInfo' in 'int stdcall WinAPIWrapper( int, int, void * * )'
+FWork.cpp(1336): Warning! W128: col(33) initializer for variable 'toolInfo' cannot be bypassed
+FWork.cpp(1273): Note! N392: col(34) definition: 'tagTOOLINFOA toolInfo' in 'int stdcall WinAPIWrapper( int, int, void * * )'
+FWork.cpp(1370): Warning! W391: col(35) assignment found in boolean expression
+FWork.cpp(1375): Warning! W391: col(35) assignment found in boolean expression
+FWork.cpp(1379): Warning! W391: col(35) assignment found in boolean expression
+FWork.cpp(1405): Warning! W628: col(33) expression is not meaningful
+FWork.cpp(1475): Warning! W015: col(3) nested comment found in comment started on line 1466
+FWork.cpp(1505): Warning! W914: col(1) 'main' must return 'int'
+FWork.cpp(1515): Warning! W726: col(1) no reference to formal parameter 'argc'
+FWork.cpp(1504): Note! N392: col(16) definition: 'int argc' in 'void main( int, char * * )'
+FWork.cpp(1515): Warning! W726: col(1) no reference to formal parameter 'argv'
+FWork.cpp(1504): Note! N392: col(28) definition: 'char * * argv' in 'void main( int, char * * )'

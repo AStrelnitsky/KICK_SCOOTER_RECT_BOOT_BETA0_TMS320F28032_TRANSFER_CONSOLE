@@ -1,0 +1,32 @@
+!define BLANK ""
+c:\Haltura\Software\Utility\Base_Set.obj : c:\Haltura\Software\Utility\Base_&
+Set.cpp .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wpp386 Base_Set.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -&
+bd -6r -bt=nt -fo=.obj -mf -xs -xr
+
+c:\Haltura\Software\Utility\Base_Set.res : c:\Haltura\Software\Utility\Base_&
+Set.rc .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wrc Base_Set.rc -bt=nt -dWIN32 -d_WIN32 -d__NT__ -i="$[:;C:\WATCOM/h;C:\WA&
+TCOM/h/nt" -q -ad -r -fo=Base_Set.res
+
+c:\Haltura\Software\Utility\Base_Set.dll : c:\Haltura\Software\Utility\Base_&
+Set.obj c:\Haltura\Software\Utility\Base_Set.res .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ @%write Base_Set.lk1 FIL Base_Set.obj
+ @%append Base_Set.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b Base_Set.imp 
+ @%append Base_Set.lk1 LIBR Base_Set.imp
+!endif
+!ifneq BLANK "Base_Set.res"
+ @%append Base_Set.lk1 RES Base_Set.res
+!endif
+ *wlink name Base_Set d all sys nt_dll op m op nostdcall libr winmm.lib op m&
+axe=25 op q op symf @Base_Set.lk1
+ wlib -q -n -b Base_Set.lib +Base_Set.dll
+

@@ -1,0 +1,31 @@
+!define BLANK ""
+c:\Haltura\Software\Utility\FWork.obj : c:\Haltura\Software\Utility\FWork.cp&
+p .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wpp386 FWork.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -bm &
+-6r -bt=nt -fo=.obj -mf -xs -xr
+
+c:\Haltura\Software\Utility\FWork.res : c:\Haltura\Software\Utility\FWork.rc&
+ .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wrc FWork.rc -bt=nt -dWIN32 -d_WIN32 -d__NT__ -i="$[:;C:\WATCOM/h;C:\WATCO&
+M/h/nt" -q -ad -r -fo=FWork.res
+
+c:\Haltura\Software\Utility\FWork.exe : c:\Haltura\Software\Utility\FWork.ob&
+j c:\Haltura\Software\Utility\FWork.res .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ @%write FWork.lk1 FIL FWork.obj
+ @%append FWork.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b FWork.imp 
+ @%append FWork.lk1 LIBR FWork.imp
+!endif
+!ifneq BLANK "FWork.res"
+ @%append FWork.lk1 RES FWork.res
+!endif
+ *wlink name FWork d all sys nt op m libr ws2_32.lib op maxe=25 op q op symf&
+ @FWork.lk1
+

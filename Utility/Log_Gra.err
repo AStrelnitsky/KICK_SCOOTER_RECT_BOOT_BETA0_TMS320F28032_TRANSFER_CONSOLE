@@ -1,0 +1,22 @@
+Log_Gra.cpp(3): Warning! W885: col(2) #endif matches #if in different source file
+Log_Gra.cpp(3): Note! N886: col(2) preprocessing directive found in: WatHack.h(1) (col 9)
+Log_Gra.cpp(340): Warning! W389: col(30) integral value may be truncated during assignment or initialization
+Log_Gra.cpp(399): Warning! W014: col(1) no reference to symbol 'T'
+Log_Gra.cpp(395): Note! N392: col(16) definition: 'double T' in 'int GrabUserInput( void )'
+Log_Gra.cpp(449): Warning! W015: col(3) nested comment found in comment started on line 401
+Log_Gra.cpp(477): Warning! W015: col(3) nested comment found in comment started on line 401
+Log_Gra.cpp(510): Warning! W472: col(123) expression with side effect in sizeof discarded
+Log_Gra.cpp(510): Warning! W472: col(123) expression with side effect in sizeof discarded
+Log_Gra.cpp(529): Warning! W014: col(1) no reference to symbol 'i'
+Log_Gra.cpp(501): Note! N392: col(13) definition: 'int i' in 'int DoButton( int )'
+Log_Gra.cpp(529): Warning! W014: col(1) no reference to symbol 'pU32'
+Log_Gra.cpp(502): Note! N392: col(13) definition: 'int pU32' in 'int DoButton( int )'
+Log_Gra.cpp(553): Warning! W391: col(46) assignment found in boolean expression
+Log_Gra.cpp(569): Warning! W007: col(109) '&array' may not produce intended result
+Log_Gra.cpp(803): Warning! W015: col(3) nested comment found in comment started on line 591
+Log_Gra.cpp(870): Warning! W472: col(107) expression with side effect in sizeof discarded
+Log_Gra.cpp(870): Warning! W472: col(107) expression with side effect in sizeof discarded
+Log_Gra.cpp(878): Warning! W726: col(1) no reference to formal parameter 'DiaId'
+Log_Gra.cpp(532): Note! N392: col(51) definition: 'long DiaId' in 'int stdcall (__export PluginEngine)( long, unsigned long, unsigned long, unsigned long )'
+Log_Gra.cpp(892): Warning! W726: col(1) no reference to formal parameter 'lpvReserved'
+Log_Gra.cpp(880): Note! N392: col(66) definition: 'void * lpvReserved' in 'int stdcall DllMain( HINSTANCE__ *, unsigned long, void * )'

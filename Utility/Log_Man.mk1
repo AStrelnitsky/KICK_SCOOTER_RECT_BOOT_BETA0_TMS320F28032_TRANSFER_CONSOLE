@@ -1,0 +1,32 @@
+!define BLANK ""
+c:\Haltura\Software\Utility\Log_Man.obj : c:\Haltura\Software\Utility\Log_Ma&
+n.cpp .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wpp386 Log_Man.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -b&
+d -6r -bt=nt -fo=.obj -mf -xs -xr
+
+c:\Haltura\Software\Utility\Log_Man.res : c:\Haltura\Software\Utility\Log_Ma&
+n.rc .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wrc Log_Man.rc -bt=nt -dWIN32 -d_WIN32 -d__NT__ -i="$[:;C:\WATCOM/h;C:\WAT&
+COM/h/nt" -q -ad -r -fo=Log_Man.res
+
+c:\Haltura\Software\Utility\Log_Man.dll : c:\Haltura\Software\Utility\Log_Ma&
+n.obj c:\Haltura\Software\Utility\Log_Man.res .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ @%write Log_Man.lk1 FIL Log_Man.obj
+ @%append Log_Man.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b Log_Man.imp 
+ @%append Log_Man.lk1 LIBR Log_Man.imp
+!endif
+!ifneq BLANK "Log_Man.res"
+ @%append Log_Man.lk1 RES Log_Man.res
+!endif
+ *wlink name Log_Man d all sys nt_dll op m op nostdcall libr winmm.lib op ma&
+xe=25 op q op symf @Log_Man.lk1
+ wlib -q -n -b Log_Man.lib +Log_Man.dll
+

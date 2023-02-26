@@ -1,0 +1,32 @@
+!define BLANK ""
+c:\Haltura\Software\Utility\FWUpdate.obj : c:\Haltura\Software\Utility\FWUpd&
+ate.cpp .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wpp386 FWUpdate.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -&
+bd -6r -bt=nt -fo=.obj -mf -xs -xr
+
+c:\Haltura\Software\Utility\FWUpdate.res : c:\Haltura\Software\Utility\FWUpd&
+ate.rc .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wrc FWUpdate.rc -bt=nt -dWIN32 -d_WIN32 -d__NT__ -i="$[:;C:\WATCOM/h;C:\WA&
+TCOM/h/nt" -q -ad -r -fo=FWUpdate.res
+
+c:\Haltura\Software\Utility\FWUpdate.dll : c:\Haltura\Software\Utility\FWUpd&
+ate.obj c:\Haltura\Software\Utility\FWUpdate.res .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ @%write FWUpdate.lk1 FIL FWUpdate.obj
+ @%append FWUpdate.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b FWUpdate.imp 
+ @%append FWUpdate.lk1 LIBR FWUpdate.imp
+!endif
+!ifneq BLANK "FWUpdate.res"
+ @%append FWUpdate.lk1 RES FWUpdate.res
+!endif
+ *wlink name FWUpdate d all sys nt_dll op m op nostdcall libr winmm.lib op m&
+axe=25 op q op symf @FWUpdate.lk1
+ wlib -q -n -b FWUpdate.lib +FWUpdate.dll
+

@@ -1,0 +1,28 @@
+ContrlPn.cpp(3): Warning! W885: col(2) #endif matches #if in different source file
+ContrlPn.cpp(3): Note! N886: col(2) preprocessing directive found in: WatHack.h(1) (col 9)
+ContrlPn.cpp(366): Warning! W389: col(30) integral value may be truncated during assignment or initialization
+ContrlPn.cpp(414): Warning! W014: col(1) no reference to symbol 'T'
+ContrlPn.cpp(410): Note! N392: col(16) definition: 'double T' in 'int GrabUserInput( void )'
+ContrlPn.cpp(442): Warning! W472: col(123) expression with side effect in sizeof discarded
+ContrlPn.cpp(442): Warning! W472: col(123) expression with side effect in sizeof discarded
+ContrlPn.cpp(449): Warning! W472: col(112) expression with side effect in sizeof discarded
+ContrlPn.cpp(449): Warning! W472: col(112) expression with side effect in sizeof discarded
+ContrlPn.cpp(450): Warning! W472: col(112) expression with side effect in sizeof discarded
+ContrlPn.cpp(450): Warning! W472: col(112) expression with side effect in sizeof discarded
+ContrlPn.cpp(458): Warning! W869: col(37) use of '_beginthread' requires build target to be multi-threaded
+ContrlPn.cpp(463): Warning! W014: col(1) no reference to symbol 'i'
+ContrlPn.cpp(433): Note! N392: col(13) definition: 'int i' in 'int DoButton( int )'
+ContrlPn.cpp(463): Warning! W014: col(1) no reference to symbol 'pU32'
+ContrlPn.cpp(434): Note! N392: col(13) definition: 'int pU32' in 'int DoButton( int )'
+ContrlPn.cpp(487): Warning! W391: col(46) assignment found in boolean expression
+ContrlPn.cpp(495): Warning! W391: col(37) assignment found in boolean expression
+ContrlPn.cpp(499): Warning! W391: col(37) assignment found in boolean expression
+ContrlPn.cpp(503): Warning! W391: col(37) assignment found in boolean expression
+ContrlPn.cpp(507): Warning! W391: col(37) assignment found in boolean expression
+ContrlPn.cpp(519): Warning! W007: col(109) '&array' may not produce intended result
+ContrlPn.cpp(614): Warning! W472: col(107) expression with side effect in sizeof discarded
+ContrlPn.cpp(614): Warning! W472: col(107) expression with side effect in sizeof discarded
+ContrlPn.cpp(624): Warning! W726: col(1) no reference to formal parameter 'DiaId'
+ContrlPn.cpp(466): Note! N392: col(51) definition: 'long DiaId' in 'int stdcall (__export PluginEngine)( long, unsigned long, unsigned long, unsigned long )'
+ContrlPn.cpp(638): Warning! W726: col(1) no reference to formal parameter 'lpvReserved'
+ContrlPn.cpp(626): Note! N392: col(66) definition: 'void * lpvReserved' in 'int stdcall DllMain( HINSTANCE__ *, unsigned long, void * )'

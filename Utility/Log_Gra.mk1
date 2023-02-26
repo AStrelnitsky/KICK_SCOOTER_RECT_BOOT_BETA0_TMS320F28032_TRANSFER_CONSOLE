@@ -1,0 +1,32 @@
+!define BLANK ""
+c:\Haltura\Software\Utility\Log_Gra.obj : c:\Haltura\Software\Utility\Log_Gr&
+a.cpp .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wpp386 Log_Gra.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -b&
+d -6r -bt=nt -fo=.obj -mf -xs -xr
+
+c:\Haltura\Software\Utility\Log_Gra.res : c:\Haltura\Software\Utility\Log_Gr&
+a.rc .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ *wrc Log_Gra.rc -bt=nt -dWIN32 -d_WIN32 -d__NT__ -i="$[:;C:\WATCOM/h;C:\WAT&
+COM/h/nt" -q -ad -r -fo=Log_Gra.res
+
+c:\Haltura\Software\Utility\Log_Gra.dll : c:\Haltura\Software\Utility\Log_Gr&
+a.obj c:\Haltura\Software\Utility\Log_Gra.res .AUTODEPEND
+ @c:
+ cd c:\Haltura\Software\Utility
+ @%write Log_Gra.lk1 FIL Log_Gra.obj
+ @%append Log_Gra.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b Log_Gra.imp 
+ @%append Log_Gra.lk1 LIBR Log_Gra.imp
+!endif
+!ifneq BLANK "Log_Gra.res"
+ @%append Log_Gra.lk1 RES Log_Gra.res
+!endif
+ *wlink name Log_Gra d all sys nt_dll op m op nostdcall libr winmm.lib op ma&
+xe=25 op q op symf @Log_Gra.lk1
+ wlib -q -n -b Log_Gra.lib +Log_Gra.dll
+

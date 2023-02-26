@@ -1,0 +1,11 @@
+Base_Set.cpp(3): Warning! W885: col(2) #endif matches #if in different source file
+Base_Set.cpp(3): Note! N886: col(2) preprocessing directive found in: WatHack.h(1) (col 9)
+Base_Set.cpp(265): Warning! W472: col(122) expression with side effect in sizeof discarded
+Base_Set.cpp(265): Warning! W472: col(122) expression with side effect in sizeof discarded
+Base_Set.cpp(435): Warning! W391: col(45) assignment found in boolean expression
+Base_Set.cpp(445): Warning! W391: col(46) assignment found in boolean expression
+Base_Set.cpp(455): Warning! W007: col(109) '&array' may not produce intended result
+Base_Set.cpp(584): Warning! W726: col(1) no reference to formal parameter 'DiaId'
+Base_Set.cpp(416): Note! N392: col(51) definition: 'long DiaId' in 'int stdcall (__export PluginEngine)( long, unsigned long, unsigned long, unsigned long )'
+Base_Set.cpp(597): Warning! W726: col(1) no reference to formal parameter 'lpvReserved'
+Base_Set.cpp(586): Note! N392: col(66) definition: 'void * lpvReserved' in 'int stdcall DllMain( HINSTANCE__ *, unsigned long, void * )'

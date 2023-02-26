@@ -1,0 +1,28 @@
+FWUpdate.cpp(3): Warning! W885: col(2) #endif matches #if in different source file
+FWUpdate.cpp(3): Note! N886: col(2) preprocessing directive found in: WatHack.h(1) (col 9)
+FWUpdate.cpp(72): Warning! W836: col(42) symbol has different type than previous symbol in same declaration
+FWUpdate.cpp(72): Note! N837: col(42) companion definition is 'Name'
+FWUpdate.cpp(72): Note! N392: col(14) definition: 'char Name[260]' in 'char const * GetIntelHex( unsigned long )'
+FWUpdate.cpp(166): Warning! W389: col(22) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(167): Warning! W389: col(28) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(232): Warning! W389: col(75) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(246): Warning! W389: col(54) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(247): Warning! W389: col(63) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(259): Warning! W389: col(51) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(263): Warning! W389: col(61) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(423): Warning! W836: col(44) symbol has different type than previous symbol in same declaration
+FWUpdate.cpp(423): Note! N837: col(44) companion definition is 'Body'
+FWUpdate.cpp(423): Note! N392: col(30) definition: 'char Body[65536]' in 'char const * DoButton( int )'
+FWUpdate.cpp(424): Warning! W836: col(59) symbol has different type than previous symbol in same declaration
+FWUpdate.cpp(424): Note! N837: col(59) companion definition is 'Hex'
+FWUpdate.cpp(424): Note! N392: col(40) definition: 'unsigned short Hex[13109]' in 'char const * DoButton( int )'
+FWUpdate.cpp(501): Warning! W389: col(38) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(502): Warning! W389: col(44) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(526): Warning! W389: col(46) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(527): Warning! W389: col(50) integral value may be truncated during assignment or initialization
+FWUpdate.cpp(581): Warning! W007: col(109) '&array' may not produce intended result
+FWUpdate.cpp(592): Warning! W391: col(20) assignment found in boolean expression
+FWUpdate.cpp(607): Warning! W726: col(1) no reference to formal parameter 'DiaId'
+FWUpdate.cpp(568): Note! N392: col(51) definition: 'long DiaId' in 'int stdcall (__export PluginEngine)( long, unsigned long, unsigned long, unsigned long )'
+FWUpdate.cpp(621): Warning! W726: col(1) no reference to formal parameter 'lpvReserved'
+FWUpdate.cpp(609): Note! N392: col(66) definition: 'void * lpvReserved' in 'int stdcall DllMain( HINSTANCE__ *, unsigned long, void * )'

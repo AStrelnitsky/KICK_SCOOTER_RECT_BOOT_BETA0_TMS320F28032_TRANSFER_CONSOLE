@@ -1,0 +1,37 @@
+dx_sdk\\dinput.h(1301): Warning! W583: col(53) redefinition of the typedef name 'LPCDIDEVICEINSTANCE' ignored
+dx_sdk\\dinput.h(1301): Note! N393: col(53) included from ContrlDX.cpp(13)
+dx_sdk\\dinput.h(1299): Note! N392: col(30) definition: 'LPCDIDEVICEINSTANCE'
+ContrlDX.cpp(295): Warning! W389: col(75) integral value may be truncated during assignment or initialization
+ContrlDX.cpp(296): Warning! W389: col(75) integral value may be truncated during assignment or initialization
+ContrlDX.cpp(314): Warning! W726: col(1) no reference to formal parameter 'p'
+ContrlDX.cpp(284): Note! N392: col(59) definition: 'void * p' in 'long stdcall V_CollectMode( _DDSURFACEDESC *, void * )'
+ContrlDX.cpp(450): Warning! W628: col(17) expression is not meaningful
+ContrlDX.cpp(572): Warning! W014: col(1) no reference to symbol 'ddrval'
+ContrlDX.cpp(444): Note! N392: col(17) definition: 'long ddrval' in 'int V_FadeOut_Everything( int )'
+ContrlDX.cpp(649): Warning! W014: col(1) no reference to symbol 'Full'
+ContrlDX.cpp(577): Note! N392: col(24) definition: 'tagRECT Full' in 'int V_RedrawAll( void )'
+ContrlDX.cpp(838): Warning! W836: col(33) symbol has different type than previous symbol in same declaration
+ContrlDX.cpp(838): Note! N837: col(33) companion definition is 'RGBbmphead'
+ContrlDX.cpp(838): Note! N392: col(14) definition: 'char RGBbmphead[54]' in 'int V_RestorePatch( Texture * )'
+ContrlDX.cpp(838): Warning! W836: col(38) symbol has different type than previous symbol in same declaration
+ContrlDX.cpp(838): Note! N837: col(38) companion definition is 'RGBbmphead'
+ContrlDX.cpp(838): Note! N392: col(14) definition: 'char RGBbmphead[54]' in 'int V_RestorePatch( Texture * )'
+ContrlDX.cpp(899): Warning! W836: col(33) symbol has different type than previous symbol in same declaration
+ContrlDX.cpp(899): Note! N837: col(33) companion definition is 'RGBbmphead'
+ContrlDX.cpp(899): Note! N392: col(14) definition: 'char RGBbmphead[54]' in 'int V_TextureInit( Texture *, char *, int, unsigned, unsigned )'
+ContrlDX.cpp(1208): Warning! W014: col(1) no reference to symbol 'j'
+ContrlDX.cpp(1034): Note! N392: col(15) definition: 'int j' in 'int G_Init( HWND__ * )'
+ContrlDX.cpp(1230): Warning! W836: col(39) symbol has different type than previous symbol in same declaration
+ContrlDX.cpp(1230): Note! N837: col(39) companion definition is 'Snapshot'
+ContrlDX.cpp(1230): Note! N392: col(22) definition: 'float Snapshot[16384]' in 'int V_PropagateColoredGraph( float *, int, int, Texture * )'
+ContrlDX.cpp(1233): Warning! W836: col(17) symbol has different type than previous symbol in same declaration
+ContrlDX.cpp(1233): Note! N837: col(17) companion definition is 'i'
+ContrlDX.cpp(1233): Note! N392: col(13) definition: 'int i' in 'int V_PropagateColoredGraph( float *, int, int, Texture * )'
+ContrlDX.cpp(1285): Warning! W836: col(17) symbol has different type than previous symbol in same declaration
+ContrlDX.cpp(1285): Note! N837: col(17) companion definition is 'i'
+ContrlDX.cpp(1285): Note! N392: col(13) definition: 'int i' in 'int V_DrawEMField( float, Texture * )'
+ContrlDX.cpp(1372): Warning! W014: col(1) no reference to symbol 'ColumnColor'
+ContrlDX.cpp(1285): Note! N392: col(22) definition: 'int ColumnColor' in 'int V_DrawEMField( float, Texture * )'
+ContrlDX.cpp(1451): Warning! W007: col(58) '&array' may not produce intended result
+ContrlDX.cpp(1540): Warning! W014: col(1) no reference to symbol 'j'
+ContrlDX.cpp(1441): Note! N392: col(16) definition: 'int j' in 'int G_Reaction( void )'
