@@ -1,7 +1,7 @@
 # FIXED
 
 f2803x_common/source/esp8266.obj: ../f2803x_common/source/esp8266.c
-f2803x_common/source/esp8266.obj: C:/Workbanch_NEW/Workbanch_NEW/WT/kick_scooter_rect_boot_beta0_tms320f28032_transfer_console/kick_scooter_rect_boot_beta0_tms320f28032/f2803x_common/include/esp8266.h
+f2803x_common/source/esp8266.obj: C:/Workbanch_NEW/Workbanch_NEW/WT/SVN/KICK_SCOOTER_RECT_BOOT_BETA0_TMS320F28032_TRANSFER_CONSOLE/kick_scooter_rect_boot_beta0_tms320f28032_transfer_console/kick_scooter_rect_boot_beta0_tms320f28032/f2803x_common/include/esp8266.h
 f2803x_common/source/esp8266.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.2.LTS/include/stdint.h
 f2803x_common/source/esp8266.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.2.LTS/include/_ti_config.h
 f2803x_common/source/esp8266.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.2.LTS/include/linkage.h
@@ -15,7 +15,7 @@ f2803x_common/source/esp8266.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_
 f2803x_common/source/esp8266.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.2.LTS/include/stddef.h
 
 ../f2803x_common/source/esp8266.c: 
-C:/Workbanch_NEW/Workbanch_NEW/WT/kick_scooter_rect_boot_beta0_tms320f28032_transfer_console/kick_scooter_rect_boot_beta0_tms320f28032/f2803x_common/include/esp8266.h: 
+C:/Workbanch_NEW/Workbanch_NEW/WT/SVN/KICK_SCOOTER_RECT_BOOT_BETA0_TMS320F28032_TRANSFER_CONSOLE/kick_scooter_rect_boot_beta0_tms320f28032_transfer_console/kick_scooter_rect_boot_beta0_tms320f28032/f2803x_common/include/esp8266.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.2.LTS/include/stdint.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.2.LTS/include/_ti_config.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-c2000_20.2.2.LTS/include/linkage.h: 

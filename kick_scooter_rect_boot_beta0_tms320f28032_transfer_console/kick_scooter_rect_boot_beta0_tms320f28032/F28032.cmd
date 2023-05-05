@@ -112,8 +112,8 @@ PAGE 0:    /* Program Memory */
  ///  FLASHF      : origin = 0x3F2000, length = 0x001000     /* on-chip FLASH */
   // FLASHE      : origin = 0x3F3000, length = 0x001000     /* on-chip FLASH */
   // FLASHD      : origin = 0x3F4000, length = 0x001000     /* on-chip FLASH */
-   FLASHC      : origin = 0x3F5000, length = 0x001000     /* on-chip FLASH */
-   FLASHA      : origin = 0x3F7000, length = 0x000F80     /* on-chip FLASH */
+   FLASHC      : origin = 0x3F5000, length = 0x002F80    /* on-chip FLASH */
+  // FLASHA      : origin = 0x3F7000, length = 0x000F80     /* on-chip FLASH */
    CSM_RSVD    : origin = 0x3F7F80, length = 0x000076     /* Part of FLASHA.  Program with all 0x0000 when CSM is in use. */
    BEGIN       : origin = 0x3F7FF6, length = 0x000002     /* Part of FLASHA.  Used for "boot to Flash" bootloader mode. */
    CSM_PWL_P0  : origin = 0x3F7FF8, length = 0x000008     /* Part of FLASHA.  CSM password locations in FLASHA */
@@ -149,10 +149,10 @@ SECTIONS
 {
 
    /* Allocate program areas: */
-   .cinit              : > FLASHA      PAGE = 0
-   .pinit              : > FLASHA,     PAGE = 0
-   .text               : > FLASHA      PAGE = 0
-   codestart           : > BEGIN       PAGE = 0
+   .cinit              : > FLASHC      				PAGE = 0
+   .pinit              : > FLASHC,    				PAGE = 0
+   .text               : > FLASHC     	PAGE = 0
+   codestart           : > BEGIN       				PAGE = 0
    ramfuncs            : LOAD = FLASHC,
                          RUN = RAML0,
                          LOAD_START(_RamfuncsLoadStart),
@@ -166,15 +166,15 @@ SECTIONS
    /* Allocate uninitalized data sections: */
    .stack              : > RAMM0       PAGE = 1
    .ebss               : > RAML2       PAGE = 1
-   .esysmem            : > RAML2       PAGE = 1
+   .esysmem            : > RAML3       PAGE = 1
 
    /* Initalized sections go in Flash */
    /* For SDFlash to program these, they must be allocated to page 0 */
-   .econst             : > FLASHA      PAGE = 0
-   .switch             : > FLASHA      PAGE = 0
+   .econst             : > FLASHC      PAGE = 0
+   .switch             : > FLASHC      PAGE = 0
 
    /* Allocate IQ math areas: */
-   IQmath              : > FLASHA      PAGE = 0            /* Math Code */
+   IQmath              : > FLASHC      PAGE = 0            /* Math Code */
    IQmathTables        : > IQTABLES,   PAGE = 0, TYPE = NOLOAD
 
   /* Uncomment the section below if calling the IQNexp() or IQexp()
